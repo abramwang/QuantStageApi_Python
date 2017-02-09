@@ -1,0 +1,71 @@
+//请求
+InitNewBackTestDict = {
+	"nStampTax" 	: 0.001,					//印花税
+	"nTransferFees"	: 0.0003,					//过户费
+	"nCommissions" 	: 0.0002,					//佣金
+	"szComment"		: "第一次回测，参数XXX"		//回测备注说明
+}
+
+OrderInsertDict = {
+	"szContractCode" : "600000.SH", 	//证券代码, windCode
+	"nOrderPrice"	: 12.00,			//申报价
+	"nOrderVol"		: 100,				//申报量
+	"nTradeType"	: 100,				//交易类型     -200 //普通卖出 	100 //普通买入
+	"nAccountId"	: 2,				//交易账户id
+	"nUserId"		: 1,				//用户id
+	"nUserInt"		: 12,				//用户保留字段
+	"nUserDouble"	: 123.22,			//用户保留字段
+	"szUserStr"		: "保留字段"		//用户保留字段
+}
+
+OrderModifyDict = {
+	"nOrderId"		: 1231000,			//订单编号 int64
+	"nPrice"		: 123.00,			//改单价
+	"nVol"			: 1200				//改单量
+}
+
+OrderDelete = {
+	"nOrderId"		: 1231000			//订单编号 int64
+}
+
+//回调
+RspUserTradeInfoDict = {
+	"nUserId" : 1,											//用户Id
+	"szUserName": "abram", 									//用户登录名
+	"szUserNickName" : "", 									//用户昵称
+	"szSecurityCode" : "QS6xCipzfPwhf3dLyqllZ45q49gc52cW", 	//加密密钥
+	"m_accountList" : [
+		{
+			"nAccountId" : 1,					//账户id
+			"szAccountName" : "账户名",
+			"szAccountNo" : "10003223123",		//账户券商登录id
+			"nAccountAttr" : 1,					//账户属性 0 非交易账户， 1 实盘生产环境账户， 3测试交易账户
+			"nCommissions" : 0.0002,			//佣金
+			"nStampTax" : 0.001,				//印花税
+			"nTransferFees" : 0.0003			//过户费
+		},
+		{}
+	]
+}
+
+RspOrderInsertDict = {
+	"nAccountId"		: 1,					//账户id
+	"nDealedPrice"		: 12.0,					//成交均价
+	"nDealedVol"		: 100,					//成交量
+	"nOffsetType"		: 0,					//开平标志
+	"nOrderId"			: 12012121,				//订单id
+	"nOrderPrice"		: 12.0,					//申报价
+	"nOrderType"		: 100,					//申报量
+	"nReqId"			: 1,					//请求id
+	"nStatus"			: 2,					//订单状态 -10 指令失败 -9 部分撤单 -8 撤单成功 -7 全部成交 0 未接受 1 已接受未受理 2 正在排队 3 待报改单 4 已报改单 5 改单受理 6 待报撤单 7 已报待撤 8 部分成交 
+	"nTradeType"		: 100,					//交易类型 
+	"nUserDouble"		: 0,					//
+	"nUserId"			: 0,					//用户id
+	"nUserInt"			: 0,					//
+	"szContractCode"	: "600000.SH",			//证券代码
+	"szContractName"	: "浦发银行",				//证券名称
+	"szInsertTime"		: "2016-12-07 10:45:20",	//订单接受时间
+	"szOrderStreamId"	: "23123-2131",			//交易所唯一订单流水号
+	"szUserStr"			: "保留字读",			//
+}
+
