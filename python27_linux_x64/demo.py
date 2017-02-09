@@ -81,7 +81,7 @@ def main():
 	mspi = DataCallBack();
 	mapi = GetDataApi(mspi, True, 3000);
 
-	mapi.Login("CYF","CYF")
+	mapi.Login("Test","Test")
 
 	dayLineList = mapi.GetDayKline("000782.SZ", "2016-12-01", "2016-12-23")
 	MAList = []
