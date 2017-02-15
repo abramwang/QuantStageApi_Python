@@ -44,7 +44,7 @@ class TradeCallBack(TradeDataCallBack):
 	def OnRtnOrderMatchNotice(self, rtn):
 		print("OnRtnOrderMatchNotice:", rtn)
 		pass
-		
+
 
 class DataCallBack(GetDataCallBack):
 	def __init__(self):
@@ -57,7 +57,7 @@ class DataCallBack(GetDataCallBack):
 		print("OnRecvDayBegin: ", dateStr)
 		pass
 	def OnRecvMarket(self, market):
-		print("OnRecvMarket", market["szDatetime"],  market["nMatch"], market["nOpen"])
+		print("OnRecvMarket", market["szDatetime"],  market["nMatch"], market["nOpen"], market["nHigh"], market["nLow"])
 		pass
 	def OnRecvTransaction(self, transaction):
 		#print("OnRecvTransaction: ", transaction)
@@ -66,12 +66,12 @@ class DataCallBack(GetDataCallBack):
 		print("OnRecvDayEnd: ", dateStr)
 		pass
 	def OnRecvKLine(self, kLine):
-		#print("OnRecvKLine: ", kLine)
+		print("OnRecvKLine: ", kLine)
 		pass
 	def OnRecvOver(self):
 		print("OnRecvOver")
 		pass
-		
+
 
 
 def main():
@@ -81,22 +81,11 @@ def main():
 	mspi = DataCallBack();
 	mapi = GetDataApi(mspi, True, 3000);
 
-	mapi.Login("Test","Test")
-
-	dayLineList = mapi.GetDayKline("000782.SZ", "2016-12-01", "2016-12-23")
-	MAList = []
-
-	factors = mapi.GetStockFactors("000782.SZ", ["EMA5"], "2016-12-01", "2016-12-23");
-
-	print(factors)
-
-	#mspi.SetEMA(MA)
-
-
+	mapi.Login("CYF","CYF")
 	#mapi.ReqRealtimeData(["000782.SZ"], False, 93000000)
-	mapi.ReqHistoryData("2016-01-01 9:30:00", "2016-12-01 24:00:00", ["000782.SZ"], False)
-	#mapi.ReqKline("minute","2016-01-01 9:30:00", "2016-12-01 24:00:00", ["000782.SZ"], False)
-
+	#mapi.ReqHistoryData("2016-01-01 9:30:00", "2016-12-01 24:00:00", ["000782.SZ"], False)
+	mapi.ReqKline("minute","2016-01-01 9:30:00", "2016-12-01 24:00:00", ["000782.SZ"], False)
+	#mapi.ReqKline("minute","2016-01-01 09:30:00", "2016-01-02 24:00:00", ["000782.SZ"], False)
 	while 1:
 		pass
 
