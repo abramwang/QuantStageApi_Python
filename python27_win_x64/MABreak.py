@@ -93,7 +93,7 @@ class DataCallBack(GetDataCallBack):
 		print("OnRecvDayEnd: ", dateStr)
 		pass
 	def OnRecvKLine(self, kLine):
-		print("OnRecvKLine: ", kLine)
+		#print("OnRecvKLine: ", kLine)
 		pass
 	def OnRecvOver(self):
 		print("OnRecvOver")
@@ -120,11 +120,11 @@ def main():
 	print(MA)
 
 	mspi.SetEMA(MA)
-	
+
+
 	#mapi.ReqRealtimeData(["000782.SZ"], False, 93000000)
-	mapi.EnableKlineCreater(["minute", "minute_5"])
 	mapi.ReqHistoryData("2016-12-23 9:30:00", "2016-12-23 24:00:00", ["000782.SZ"], False)
-	#mapi.ReqHistoryData("minute", "2016-12-23 9:30:00", "2016-12-23 24:00:00", ["000782.SZ"], False)
+	#mapi.ReqKline("minute","2016-01-01 9:30:00", "2016-12-01 24:00:00", ["000782.SZ"], False)
 
 
 
@@ -133,6 +133,50 @@ def main():
 		#x, y = t.OrderInsert(newOrderReq)
 		pass
 
+
+"""
+	
+
+
+	mspi = DataCallBack(t);
+	m = SimulationGetDataApi(mspi, t, True, 3000)
+	m.Login("CYF", "CYF")
+	t.Login("CYF", "CYF")
+
+	#print(dir(t))
+	#print(dir(m))
+
+	stockInfo = m.GetStockBaseInfo("600000.SH","","");
+	print(stockInfo)
+
+	kLine = m.GetDayKline("600000.SH","2016-05-01", "2016-05-10");
+	print(kLine)
+
+	factors = m.GetStockFactors("600000.SH", ["AR","MACD"], "2016-05-01", "2016-05-10");
+	print(factors)
+
+
+	#m.ReqHistoryData("2016-05-03 9:30:00", "2016-05-03 9:30:10", ["600000.SH"], False)
+	
+"""
+"""
+	newOrderReq = {
+		"nOrderPrice": 12.5,
+		"nOrderVol": 100,
+		"szContractCode":"600000.SH",
+		"nTradeType": 100,
+		"nAccountId": 1,
+		"nUserId" : 1,
+		"nUserInt" : 0,
+		"nUserDouble" : 0,
+		"szUserStr" :""
+	}
+"""
+
+	#x, y = t.OrderInsert(newOrderReq)
+#	print(dir(newOrderReq))
+#	reqId, err = t.OrderInsert(newOrderReq)
+#	print(newOrderReq.length, reqId, err)
 
 if __name__ == '__main__':
 	main()

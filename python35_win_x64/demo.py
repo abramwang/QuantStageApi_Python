@@ -7,8 +7,8 @@ def main():
 	t = PT_QuantBaseApi_Python35.SimulationTradeDataApi(tspi)
 	mspi = GetDataCallBack();
 	m = PT_QuantBaseApi_Python35.SimulationGetDataApi(mspi, t, True, 3000)
-	m.Login("ZT", "ZT")
-	t.Login("ZT", "ZT")
+	m.Login("Test", "Test")
+	t.Login("Test", "Test")
 
 
 	m.ReqHistoryData("2016-05-03 9:30:00", "2016-05-03 15:3:00", ["600000.SH"], False)
