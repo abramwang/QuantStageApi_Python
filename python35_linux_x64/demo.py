@@ -4,15 +4,17 @@ from PT_QuantBaseApi import PT_QuantBaseApi_Python35, GetDataCallBack, TradeData
 
 def main():
 	tspi = TradeDataCallBack()
-	t = PT_QuantBaseApi_Python35.SimulationTradeDataApi(tspi)
+	
+	t = PT_QuantBaseApi_Python35.TradeDataApi(tspi, True)
 	mspi = GetDataCallBack();
-	m = PT_QuantBaseApi_Python35.SimulationGetDataApi(mspi, t, True, 3000)
-	m.Login("ZT", "ZT")
-	t.Login("ZT", "ZT")
+	m = PT_QuantBaseApi_Python35.GetDataApi(mspi, t)
+	m.Login("CYF", "CYF")
+	t.Login("CYF", "CYF")
 
 
 	m.ReqHistoryData("2016-05-03 9:30:00", "2016-05-03 15:3:00", ["600000.SH"], False)
 	
+	"""
 	newOrderReq = {
 		"nOrderPrice": 12.5,
 		"nOrderVol": 100,
@@ -35,7 +37,7 @@ def main():
 #	reqId, err = t.OrderInsert(newOrderReq)
 #	print(newOrderReq.length, reqId, err)
 
-
+	"""
 	pass
 
 if __name__ == '__main__':

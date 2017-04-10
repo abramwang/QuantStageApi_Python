@@ -83,7 +83,7 @@ class TradeDataCallBack(PT_QuantBaseApi_Python35.TradeDataSpi):
 	def OnRspOrderModify(self, rsp, err):
 		print("OnRspOrderModify:", rsp, err)
 		pass
-	def OnRspOrderDelete(self):
+	def OnRspOrderDelete(self, rsp, err):
 		print("OnRspOrderDelete:", rsp, err)
 		pass
 	def OnRspQryOrder(self, rsp, err, isEnd):
