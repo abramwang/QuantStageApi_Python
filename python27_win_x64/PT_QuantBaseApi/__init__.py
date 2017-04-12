@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
-from PT_QuantBaseApi_Python27 import GetDataSpi, GetDataApi, SimulationGetDataApi, TradeDataSpi, TradeDataApi, SimulationTradeDataApi
+from PT_QuantBaseApi import PT_QuantBaseApi_Python27
 
-class GetDataCallBack(GetDataSpi):
+class GetDataCallBack(PT_QuantBaseApi_Python27.GetDataSpi):
 	def __init__(self):
 		super(GetDataCallBack, self).__init__()
 		pass
@@ -13,6 +13,10 @@ class GetDataCallBack(GetDataSpi):
 		self.OnRecvMarket(self.m_data)
 	def RecvTransaction(self):
 		self.OnRecvTransaction(self.m_data)
+	def RecvOrderQueue(self):
+		self.OnRecvOrderQueue(self.m_data)
+	def RecvOrder(self):
+		self.OnRecvOrder(self.m_data)
 	def RecvKLine(self):
 		self.OnRecvKLine(self.m_data)
 	def RecvDayEnd(self):
@@ -32,6 +36,12 @@ class GetDataCallBack(GetDataSpi):
 	def OnRecvTransaction(self, transaction):
 		print("OnRecvTransaction: ", transaction)
 		pass
+	def OnRecvOrderQueue(self, OrderQueue):
+		print("OnRecvOrderQueue: ", OrderQueue)
+		pass
+	def OnRecvOrder(self, Order):
+		print("OnRecvOrder: ", Order)
+		pass
 	def OnRecvDayEnd(self, dateStr):
 		print("OnRecvDayEnd: ", dateStr)
 		pass
@@ -43,7 +53,7 @@ class GetDataCallBack(GetDataSpi):
 		pass
 
 
-class TradeDataCallBack(TradeDataSpi):
+class TradeDataCallBack(PT_QuantBaseApi_Python27.TradeDataSpi):
 	def __init__(self):
 		super(TradeDataCallBack, self).__init__()
 		pass
@@ -83,7 +93,7 @@ class TradeDataCallBack(TradeDataSpi):
 	def OnRspOrderModify(self, rsp, err):
 		print("OnRspOrderModify:", rsp, err)
 		pass
-	def OnRspOrderDelete(self):
+	def OnRspOrderDelete(self, rsp, err):
 		print("OnRspOrderDelete:", rsp, err)
 		pass
 	def OnRspQryOrder(self, rsp, err, isEnd):

@@ -13,6 +13,10 @@ class GetDataCallBack(PT_QuantBaseApi_Python35.GetDataSpi):
 		self.OnRecvMarket(self.m_data)
 	def RecvTransaction(self):
 		self.OnRecvTransaction(self.m_data)
+	def RecvOrderQueue(self):
+		self.OnRecvOrderQueue(self.m_data)
+	def RecvOrder(self):
+		self.OnRecvOrder(self.m_data)
 	def RecvKLine(self):
 		self.OnRecvKLine(self.m_data)
 	def RecvDayEnd(self):
@@ -31,6 +35,12 @@ class GetDataCallBack(PT_QuantBaseApi_Python35.GetDataSpi):
 		pass
 	def OnRecvTransaction(self, transaction):
 		print("OnRecvTransaction: ", transaction)
+		pass
+	def OnRecvOrderQueue(self, OrderQueue):
+		print("OnRecvOrderQueue: ", OrderQueue)
+		pass
+	def OnRecvOrder(self, Order):
+		print("OnRecvOrder: ", Order)
 		pass
 	def OnRecvDayEnd(self, dateStr):
 		print("OnRecvDayEnd: ", dateStr)
