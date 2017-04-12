@@ -1,0 +1,18 @@
+Log file created at: 2017/04/07 15:28:35
+Running on machine: ABRAM-ALIEN
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I0407 15:28:35.908344 11140 TradeDataApi.cpp:273] [CreateSyncSimulationTradeDataApi] Sucessfull
+I0407 15:28:36.751392 11140 GetDataApi.cpp:345] CreateSyncGetDataApi Sucessfull: autoRecon 0, reconTimeout 1000, autonReq 0
+I0407 15:28:38.199476 11140 TradeDataApi.cpp:90] [SetNewBackTest] nBackTestId 1656, stampTax 0.001000, transferFees 0.000300, commissions 0.000200, szComment Á¨¨‰∏ÄÊ¨°ÂõûÊµãÔºåÂèÇÊï∞XXX, err 0
+I0407 15:28:38.291481 11140 HistoryConnection.cpp:52] Connect to history data server!
+I0407 15:28:38.302481 11140 DataConnection.cpp:336] Data Server Connected
+I0407 15:28:38.602499 11140 HistoryConnection.cpp:54] Send user info to history data server! user: ≤‚ ‘’ ∫≈
+I0407 15:28:38.602499 11140 GetDataApi.cpp:207] ReqHistoryData: type 64, beginTime 2016-04-03 00:00:00, endTime 2016-05-03 00:00:00, isAllMarket 0, subcode 600000.SH 000001.SZ 
+I0407 15:28:38.602499 11140 GetDataApi.cpp:217] [ReqHistoryGDKLineData] Sync Model Start Exec
+I0407 15:28:38.602499 11140 SyncController.cpp:165] [exec] server type 12
+I0407 15:28:42.385715 11140 SyncController.cpp:191] [exec] over, break reason code 0
+I0407 15:28:42.386715 11140 GetDataApi.cpp:180] [ReqHistoryData] beginTime 2016-05-04 09:30:00, endTime 2016-6-10 15:30:00, modelType 0, isAllMarket 0, subcode 600000.SH 000001.SZ 
+I0407 15:28:42.386715 11140 GetDataApi.cpp:190] [ReqHistoryData] Sync Model Start Exec
+I0407 15:28:42.386715 11140 SyncController.cpp:165] [exec] server type 12
+I0407 15:30:17.540158 11140 SyncController.cpp:191] [exec] over, break reason code 0
+I0407 15:30:17.540158 11140 GetDataApi.cpp:192] [ReqHistoryData] Sync Model Exec over

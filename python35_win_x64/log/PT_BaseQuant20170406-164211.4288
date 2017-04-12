@@ -1,0 +1,161 @@
+Log file created at: 2017/04/06 16:42:11
+Running on machine: ABRAM-ALIEN
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I0406 16:42:11.219338  2876 TradeDataApi.cpp:273] [CreateSyncSimulationTradeDataApi] Sucessfull
+I0406 16:42:12.834430  2876 GetDataApi.cpp:345] CreateSyncGetDataApi Sucessfull: autoRecon 0, reconTimeout 1000, autonReq 0
+I0406 16:42:14.662535  2876 TradeDataApi.cpp:90] [SetNewBackTest] nBackTestId 1748, stampTax 0.001000, transferFees 0.000300, commissions 0.000200, szComment Á¨¨‰∏ÄÊ¨°ÂõûÊµãÔºåÂèÇÊï∞XXX, err 0
+I0406 16:42:14.750540  2876 HistoryConnection.cpp:52] Connect to history data server!
+I0406 16:42:14.798543  2876 DataConnection.cpp:336] Data Server Connected
+I0406 16:42:15.099560  2876 HistoryConnection.cpp:54] Send user info to history data server! user: –Ïˆ¡¥Ô
+I0406 16:42:15.099560  2876 GetDataApi.cpp:207] ReqHistoryData: type 64, beginTime 2016-04-03 00:00:00, endTime 2016-05-03 00:00:00, isAllMarket 0, subcode 600000.SH 000001.SZ 
+I0406 16:42:15.099560  2876 GetDataApi.cpp:217] [ReqHistoryGDKLineData] Sync Model Start Exec
+I0406 16:42:15.099560  2876 SyncController.cpp:165] [exec] server type 12
+I0406 16:42:16.979667  2876 SyncController.cpp:191] [exec] over, break reason code 0
+I0406 16:42:16.980667  2876 GetDataApi.cpp:180] [ReqHistoryData] beginTime 2016-05-04 09:30:00, endTime 2016-10-04 15:30:00, modelType 0, isAllMarket 0, subcode 600000.SH 000001.SZ 
+I0406 16:42:16.980667  2876 GetDataApi.cpp:190] [ReqHistoryData] Sync Model Start Exec
+I0406 16:42:16.980667  2876 SyncController.cpp:165] [exec] server type 12
+I0406 16:42:18.586760  2876 SimulationTradeDataApi.cpp:483] [InsertRsp] ReqId:1 OrderId:1 Time:2016-05-04 09:30:02 Status:1
+I0406 16:42:18.588759  2876 SimulationTradeDataApi.cpp:488] [OrderStatusChange] ReqId:1 OrderId:1 Code:600000.SH Price:18.060000 Vol:100 Time:2016-05-04 09:30:02 Status:2 DPrice:0.000000 DVol:0
+I0406 16:42:18.588759  2876 SimulationTradeDataApi.cpp:322] [InsertReq] ReqId:1 Code:600000.SH Price:18.060000 Vol:100 Time:2016-05-04 09:30:02
+I0406 16:42:18.591759 10764 SimulationTradeDataApi.cpp:627] [OrderStatusChange] ReqId:1 OrderId:1 Code:600000.SH Price:18.060000 Vol:100 Time:2016-05-04 09:30:02 Status:-7 DPrice:18.060000 DVol:100
+E0406 16:42:18.593760 10764 SimulationTradeDataApi.cpp:630] [OrderMatch] ReqId:1 OrderId1 TradeId:1 MatcyPrice:18.060000 MatchVol:100 MatchTime:2016-05-04 09:30:01
+I0406 16:42:18.669764  2876 SimulationTradeDataApi.cpp:483] [InsertRsp] ReqId:2 OrderId:2 Time:2016-05-04 09:30:01 Status:1
+I0406 16:42:18.672765  2876 SimulationTradeDataApi.cpp:488] [OrderStatusChange] ReqId:2 OrderId:2 Code:000001.SZ Price:10.680000 Vol:100 Time:2016-05-04 09:30:01 Status:2 DPrice:0.000000 DVol:0
+I0406 16:42:18.674764  2876 SimulationTradeDataApi.cpp:627] [OrderStatusChange] ReqId:2 OrderId:2 Code:000001.SZ Price:10.680000 Vol:100 Time:2016-05-04 09:30:01 Status:-7 DPrice:10.680000 DVol:100
+E0406 16:42:18.674764  2876 SimulationTradeDataApi.cpp:630] [OrderMatch] ReqId:2 OrderId2 TradeId:2 MatcyPrice:10.680000 MatchVol:100 MatchTime:2016-05-04 09:30:01
+I0406 16:42:18.675765  2876 SimulationTradeDataApi.cpp:322] [InsertReq] ReqId:2 Code:000001.SZ Price:10.680000 Vol:100 Time:2016-05-04 09:30:01
+I0406 16:42:19.036785  2876 SimulationTradeDataApi.cpp:483] [InsertRsp] ReqId:3 OrderId:3 Time:2016-05-04 09:46:41 Status:1
+I0406 16:42:19.037786  2876 SimulationTradeDataApi.cpp:488] [OrderStatusChange] ReqId:3 OrderId:3 Code:600000.SH Price:18.160000 Vol:100 Time:2016-05-04 09:46:41 Status:2 DPrice:0.000000 DVol:0
+I0406 16:42:19.039785  2876 SimulationTradeDataApi.cpp:627] [OrderStatusChange] ReqId:3 OrderId:3 Code:600000.SH Price:18.160000 Vol:100 Time:2016-05-04 09:46:41 Status:-7 DPrice:18.160000 DVol:100
+E0406 16:42:19.039785  2876 SimulationTradeDataApi.cpp:630] [OrderMatch] ReqId:3 OrderId3 TradeId:3 MatcyPrice:18.160000 MatchVol:100 MatchTime:94641000
+I0406 16:42:19.040786  2876 SimulationTradeDataApi.cpp:322] [InsertReq] ReqId:3 Code:600000.SH Price:18.160000 Vol:100 Time:2016-05-04 09:46:41
+I0406 16:42:19.357803  2876 SimulationTradeDataApi.cpp:483] [InsertRsp] ReqId:4 OrderId:4 Time:2016-05-04 10:06:09 Status:1
+I0406 16:42:19.359803  2876 SimulationTradeDataApi.cpp:488] [OrderStatusChange] ReqId:4 OrderId:4 Code:000001.SZ Price:10.710000 Vol:100 Time:2016-05-04 10:06:09 Status:2 DPrice:0.000000 DVol:0
+I0406 16:42:19.359803  2876 SimulationTradeDataApi.cpp:322] [InsertReq] ReqId:4 Code:000001.SZ Price:10.710000 Vol:100 Time:2016-05-04 10:06:09
+I0406 16:42:19.482810 10764 SimulationTradeDataApi.cpp:627] [OrderStatusChange] ReqId:4 OrderId:4 Code:000001.SZ Price:10.710000 Vol:100 Time:2016-05-04 10:06:09 Status:-7 DPrice:10.710000 DVol:100
+E0406 16:42:19.483811 10764 SimulationTradeDataApi.cpp:630] [OrderMatch] ReqId:4 OrderId4 TradeId:4 MatcyPrice:10.710000 MatchVol:100 MatchTime:2016-05-04 10:16:23
+I0406 16:42:21.917950  2876 SimulationTradeDataApi.cpp:483] [InsertRsp] ReqId:5 OrderId:1 Time:2016-05-05 09:25:00 Status:1
+I0406 16:42:21.918951  2876 SimulationTradeDataApi.cpp:488] [OrderStatusChange] ReqId:5 OrderId:1 Code:000001.SZ Price:10.690000 Vol:100 Time:2016-05-05 09:25:00 Status:2 DPrice:0.000000 DVol:0
+I0406 16:42:21.920950  2876 SimulationTradeDataApi.cpp:627] [OrderStatusChange] ReqId:5 OrderId:1 Code:000001.SZ Price:10.690000 Vol:100 Time:2016-05-05 09:25:00 Status:-7 DPrice:10.690000 DVol:100
+E0406 16:42:21.920950  2876 SimulationTradeDataApi.cpp:630] [OrderMatch] ReqId:5 OrderId1 TradeId:1 MatcyPrice:10.690000 MatchVol:100 MatchTime:2016-05-05 09:25:00
+I0406 16:42:21.922950  2876 SimulationTradeDataApi.cpp:322] [InsertReq] ReqId:5 Code:000001.SZ Price:10.690000 Vol:100 Time:2016-05-05 09:25:00
+I0406 16:42:21.928951  2876 SimulationTradeDataApi.cpp:483] [InsertRsp] ReqId:6 OrderId:2 Time:2016-05-05 09:25:03 Status:1
+I0406 16:42:21.932951  2876 SimulationTradeDataApi.cpp:488] [OrderStatusChange] ReqId:6 OrderId:2 Code:600000.SH Price:18.060000 Vol:100 Time:2016-05-05 09:25:03 Status:2 DPrice:0.000000 DVol:0
+I0406 16:42:21.932951  2876 SimulationTradeDataApi.cpp:322] [InsertReq] ReqId:6 Code:600000.SH Price:18.060000 Vol:100 Time:2016-05-05 09:25:03
+I0406 16:42:21.933951 10764 SimulationTradeDataApi.cpp:627] [OrderStatusChange] ReqId:6 OrderId:2 Code:600000.SH Price:18.060000 Vol:100 Time:2016-05-05 09:25:03 Status:-7 DPrice:18.060000 DVol:100
+E0406 16:42:21.935951 10764 SimulationTradeDataApi.cpp:630] [OrderMatch] ReqId:6 OrderId2 TradeId:2 MatcyPrice:18.060000 MatchVol:100 MatchTime:2016-05-05 09:25:03
+I0406 16:42:21.967953  2876 SimulationTradeDataApi.cpp:483] [InsertRsp] ReqId:7 OrderId:3 Time:2016-05-05 09:31:02 Status:1
+I0406 16:42:21.969954  2876 SimulationTradeDataApi.cpp:488] [OrderStatusChange] ReqId:7 OrderId:3 Code:000001.SZ Price:10.680000 Vol:100 Time:2016-05-05 09:31:02 Status:2 DPrice:0.000000 DVol:0
+I0406 16:42:21.970953  2876 SimulationTradeDataApi.cpp:322] [InsertReq] ReqId:7 Code:000001.SZ Price:10.680000 Vol:100 Time:2016-05-05 09:31:02
+I0406 16:42:21.993954 10764 SimulationTradeDataApi.cpp:627] [OrderStatusChange] ReqId:7 OrderId:3 Code:000001.SZ Price:10.680000 Vol:100 Time:2016-05-05 09:31:02 Status:-7 DPrice:10.680000 DVol:100
+E0406 16:42:21.995954 10764 SimulationTradeDataApi.cpp:630] [OrderMatch] ReqId:7 OrderId3 TradeId:3 MatcyPrice:10.680000 MatchVol:100 MatchTime:93238960
+I0406 16:42:22.036957  2876 SimulationTradeDataApi.cpp:483] [InsertRsp] ReqId:8 OrderId:4 Time:2016-05-05 09:35:05 Status:1
+I0406 16:42:22.038957  2876 SimulationTradeDataApi.cpp:488] [OrderStatusChange] ReqId:8 OrderId:4 Code:600000.SH Price:18.040000 Vol:100 Time:2016-05-05 09:35:05 Status:2 DPrice:0.000000 DVol:0
+I0406 16:42:22.040957  2876 SimulationTradeDataApi.cpp:627] [OrderStatusChange] ReqId:8 OrderId:4 Code:600000.SH Price:18.040000 Vol:100 Time:2016-05-05 09:35:05 Status:-7 DPrice:18.040000 DVol:100
+E0406 16:42:22.040957  2876 SimulationTradeDataApi.cpp:630] [OrderMatch] ReqId:8 OrderId4 TradeId:4 MatcyPrice:18.040000 MatchVol:100 MatchTime:93505000
+I0406 16:42:22.041957  2876 SimulationTradeDataApi.cpp:322] [InsertReq] ReqId:8 Code:600000.SH Price:18.040000 Vol:100 Time:2016-05-05 09:35:05
+I0406 16:42:24.863118  2876 SimulationTradeDataApi.cpp:483] [InsertRsp] ReqId:9 OrderId:1 Time:2016-05-06 09:25:00 Status:1
+I0406 16:42:24.865118  2876 SimulationTradeDataApi.cpp:488] [OrderStatusChange] ReqId:9 OrderId:1 Code:000001.SZ Price:10.730000 Vol:100 Time:2016-05-06 09:25:00 Status:2 DPrice:0.000000 DVol:0
+I0406 16:42:24.867118  2876 SimulationTradeDataApi.cpp:627] [OrderStatusChange] ReqId:9 OrderId:1 Code:000001.SZ Price:10.730000 Vol:100 Time:2016-05-06 09:25:00 Status:-7 DPrice:10.730000 DVol:100
+E0406 16:42:24.867118  2876 SimulationTradeDataApi.cpp:630] [OrderMatch] ReqId:9 OrderId1 TradeId:1 MatcyPrice:10.730000 MatchVol:100 MatchTime:2016-05-06 09:25:00
+I0406 16:42:24.868119  2876 SimulationTradeDataApi.cpp:322] [InsertReq] ReqId:9 Code:000001.SZ Price:10.730000 Vol:100 Time:2016-05-06 09:25:00
+I0406 16:42:24.879119  2876 SimulationTradeDataApi.cpp:483] [InsertRsp] ReqId:10 OrderId:2 Time:2016-05-06 09:25:04 Status:1
+I0406 16:42:24.881119  2876 SimulationTradeDataApi.cpp:488] [OrderStatusChange] ReqId:10 OrderId:2 Code:600000.SH Price:18.070000 Vol:100 Time:2016-05-06 09:25:04 Status:2 DPrice:0.000000 DVol:0
+I0406 16:42:24.881119  2876 SimulationTradeDataApi.cpp:322] [InsertReq] ReqId:10 Code:600000.SH Price:18.070000 Vol:100 Time:2016-05-06 09:25:04
+I0406 16:42:24.882119 10764 SimulationTradeDataApi.cpp:627] [OrderStatusChange] ReqId:10 OrderId:2 Code:600000.SH Price:18.070000 Vol:100 Time:2016-05-06 09:25:04 Status:-7 DPrice:18.070000 DVol:100
+E0406 16:42:24.883119 10764 SimulationTradeDataApi.cpp:630] [OrderMatch] ReqId:10 OrderId2 TradeId:2 MatcyPrice:18.070000 MatchVol:100 MatchTime:2016-05-06 09:25:04
+I0406 16:42:24.885119 10764 SimulationTradeDataApi.cpp:627] [OrderStatusChange] ReqId:10 OrderId:2 Code:600000.SH Price:18.070000 Vol:100 Time:2016-05-06 09:25:04 Status:-7 DPrice:18.070000 DVol:100
+E0406 16:42:24.887120 10764 SimulationTradeDataApi.cpp:630] [OrderMatch] ReqId:10 OrderId2 TradeId:3 MatcyPrice:18.070000 MatchVol:0 MatchTime:2016-05-06 09:25:04
+I0406 16:42:25.027128  2876 SimulationTradeDataApi.cpp:483] [InsertRsp] ReqId:11 OrderId:3 Time:2016-05-06 09:36:02 Status:1
+I0406 16:42:25.031128  2876 SimulationTradeDataApi.cpp:488] [OrderStatusChange] ReqId:11 OrderId:3 Code:600000.SH Price:18.040000 Vol:100 Time:2016-05-06 09:36:02 Status:2 DPrice:0.000000 DVol:0
+I0406 16:42:25.031128  2876 SimulationTradeDataApi.cpp:322] [InsertReq] ReqId:11 Code:600000.SH Price:18.040000 Vol:100 Time:2016-05-06 09:36:02
+I0406 16:42:25.037128  2876 SimulationTradeDataApi.cpp:483] [InsertRsp] ReqId:12 OrderId:4 Time:2016-05-06 09:36:13 Status:1
+I0406 16:42:25.039129  2876 SimulationTradeDataApi.cpp:488] [OrderStatusChange] ReqId:12 OrderId:4 Code:000001.SZ Price:10.720000 Vol:100 Time:2016-05-06 09:36:13 Status:2 DPrice:0.000000 DVol:0
+I0406 16:42:25.039129  2876 SimulationTradeDataApi.cpp:322] [InsertReq] ReqId:12 Code:000001.SZ Price:10.720000 Vol:100 Time:2016-05-06 09:36:13
+I0406 16:42:25.044129 10764 SimulationTradeDataApi.cpp:627] [OrderStatusChange] ReqId:11 OrderId:3 Code:600000.SH Price:18.040000 Vol:100 Time:2016-05-06 09:36:02 Status:-7 DPrice:18.040000 DVol:100
+E0406 16:42:25.046129 10764 SimulationTradeDataApi.cpp:630] [OrderMatch] ReqId:11 OrderId3 TradeId:4 MatcyPrice:18.040000 MatchVol:100 MatchTime:93635000
+I0406 16:42:27.769284  2876 SimulationTradeDataApi.cpp:483] [InsertRsp] ReqId:13 OrderId:1 Time:2016-05-09 09:25:03 Status:1
+I0406 16:42:27.771286  2876 SimulationTradeDataApi.cpp:488] [OrderStatusChange] ReqId:13 OrderId:1 Code:000001.SZ Price:10.500000 Vol:100 Time:2016-05-09 09:25:03 Status:2 DPrice:0.000000 DVol:0
+I0406 16:42:27.772285  2876 SimulationTradeDataApi.cpp:627] [OrderStatusChange] ReqId:13 OrderId:1 Code:000001.SZ Price:10.500000 Vol:100 Time:2016-05-09 09:25:03 Status:-7 DPrice:10.500000 DVol:100
+E0406 16:42:27.773285  2876 SimulationTradeDataApi.cpp:630] [OrderMatch] ReqId:13 OrderId1 TradeId:1 MatcyPrice:10.500000 MatchVol:100 MatchTime:2016-05-09 09:25:03
+I0406 16:42:27.773285  2876 SimulationTradeDataApi.cpp:322] [InsertReq] ReqId:13 Code:000001.SZ Price:10.500000 Vol:100 Time:2016-05-09 09:25:03
+I0406 16:42:27.774286  2876 SimulationTradeDataApi.cpp:483] [InsertRsp] ReqId:14 OrderId:2 Time:2016-05-09 09:25:04 Status:1
+I0406 16:42:27.775285  2876 SimulationTradeDataApi.cpp:488] [OrderStatusChange] ReqId:14 OrderId:2 Code:600000.SH Price:17.710000 Vol:100 Time:2016-05-09 09:25:04 Status:2 DPrice:0.000000 DVol:0
+I0406 16:42:27.775285  2876 SimulationTradeDataApi.cpp:322] [InsertReq] ReqId:14 Code:600000.SH Price:17.710000 Vol:100 Time:2016-05-09 09:25:04
+I0406 16:42:27.776285 10764 SimulationTradeDataApi.cpp:627] [OrderStatusChange] ReqId:14 OrderId:2 Code:600000.SH Price:17.710000 Vol:100 Time:2016-05-09 09:25:04 Status:-7 DPrice:17.710000 DVol:100
+E0406 16:42:27.777285 10764 SimulationTradeDataApi.cpp:630] [OrderMatch] ReqId:14 OrderId2 TradeId:2 MatcyPrice:17.710000 MatchVol:100 MatchTime:2016-05-09 09:25:04
+I0406 16:42:30.262428  2876 SimulationTradeDataApi.cpp:483] [InsertRsp] ReqId:15 OrderId:3 Time:2016-05-09 14:50:02 Status:1
+I0406 16:42:30.264427  2876 SimulationTradeDataApi.cpp:488] [OrderStatusChange] ReqId:15 OrderId:3 Code:600000.SH Price:17.450000 Vol:100 Time:2016-05-09 14:50:02 Status:2 DPrice:0.000000 DVol:0
+I0406 16:42:30.264427  2876 SimulationTradeDataApi.cpp:322] [InsertReq] ReqId:15 Code:600000.SH Price:17.450000 Vol:100 Time:2016-05-09 14:50:02
+I0406 16:42:30.264427 10764 SimulationTradeDataApi.cpp:627] [OrderStatusChange] ReqId:15 OrderId:3 Code:600000.SH Price:17.450000 Vol:100 Time:2016-05-09 14:50:02 Status:-7 DPrice:17.450000 DVol:100
+E0406 16:42:30.266427 10764 SimulationTradeDataApi.cpp:630] [OrderMatch] ReqId:15 OrderId3 TradeId:3 MatcyPrice:17.450000 MatchVol:100 MatchTime:2016-05-09 14:50:01
+I0406 16:42:30.268427  2876 SimulationTradeDataApi.cpp:483] [InsertRsp] ReqId:16 OrderId:4 Time:2016-05-09 14:50:03 Status:1
+I0406 16:42:30.269428  2876 SimulationTradeDataApi.cpp:488] [OrderStatusChange] ReqId:16 OrderId:4 Code:000001.SZ Price:10.340000 Vol:100 Time:2016-05-09 14:50:03 Status:2 DPrice:0.000000 DVol:0
+I0406 16:42:30.269428  2876 SimulationTradeDataApi.cpp:322] [InsertReq] ReqId:16 Code:000001.SZ Price:10.340000 Vol:100 Time:2016-05-09 14:50:03
+I0406 16:42:30.270427  2876 SimulationTradeDataApi.cpp:483] [InsertRsp] ReqId:17 OrderId:5 Time:2016-05-09 14:50:05 Status:1
+I0406 16:42:30.271428  2876 SimulationTradeDataApi.cpp:488] [OrderStatusChange] ReqId:17 OrderId:5 Code:600000.SH Price:17.450000 Vol:100 Time:2016-05-09 14:50:05 Status:2 DPrice:0.000000 DVol:0
+I0406 16:42:30.271428  2876 SimulationTradeDataApi.cpp:322] [InsertReq] ReqId:17 Code:600000.SH Price:17.450000 Vol:100 Time:2016-05-09 14:50:05
+I0406 16:42:30.272428  2876 SimulationTradeDataApi.cpp:494] [Error]InsertRsp ReqId:18 ErrorCode:209
+I0406 16:42:30.272428  2876 SimulationTradeDataApi.cpp:322] [InsertReq] ReqId:18 Code:600000.SH Price:17.450000 Vol:100 Time:2016-05-09 14:50:05
+I0406 16:42:30.272428 10764 SimulationTradeDataApi.cpp:627] [OrderStatusChange] ReqId:17 OrderId:5 Code:600000.SH Price:17.450000 Vol:100 Time:2016-05-09 14:50:05 Status:-7 DPrice:17.450000 DVol:100
+E0406 16:42:30.273428 10764 SimulationTradeDataApi.cpp:630] [OrderMatch] ReqId:17 OrderId5 TradeId:4 MatcyPrice:17.450000 MatchVol:100 MatchTime:2016-05-09 14:50:04
+I0406 16:42:30.278429  2876 SimulationTradeDataApi.cpp:494] [Error]InsertRsp ReqId:19 ErrorCode:209
+I0406 16:42:30.278429  2876 SimulationTradeDataApi.cpp:322] [InsertReq] ReqId:19 Code:000001.SZ Price:10.340000 Vol:100 Time:2016-05-09 14:50:06
+I0406 16:42:30.278429  2876 SimulationTradeDataApi.cpp:483] [InsertRsp] ReqId:20 OrderId:6 Time:2016-05-09 14:50:06 Status:1
+I0406 16:42:30.280428  2876 SimulationTradeDataApi.cpp:488] [OrderStatusChange] ReqId:20 OrderId:6 Code:000001.SZ Price:10.340000 Vol:100 Time:2016-05-09 14:50:06 Status:2 DPrice:0.000000 DVol:0
+I0406 16:42:30.280428  2876 SimulationTradeDataApi.cpp:322] [InsertReq] ReqId:20 Code:000001.SZ Price:10.340000 Vol:100 Time:2016-05-09 14:50:06
+I0406 16:42:30.280428  2876 SimulationTradeDataApi.cpp:483] [InsertRsp] ReqId:21 OrderId:7 Time:2016-05-09 14:50:08 Status:1
+I0406 16:42:30.286428  2876 SimulationTradeDataApi.cpp:488] [OrderStatusChange] ReqId:21 OrderId:7 Code:600000.SH Price:17.450000 Vol:100 Time:2016-05-09 14:50:08 Status:2 DPrice:0.000000 DVol:0
+I0406 16:42:30.286428  2876 SimulationTradeDataApi.cpp:322] [InsertReq] ReqId:21 Code:600000.SH Price:17.450000 Vol:100 Time:2016-05-09 14:50:08
+I0406 16:42:30.286428  2876 SimulationTradeDataApi.cpp:494] [Error]InsertRsp ReqId:22 ErrorCode:209
+I0406 16:42:30.286428  2876 SimulationTradeDataApi.cpp:322] [InsertReq] ReqId:22 Code:600000.SH Price:17.450000 Vol:100 Time:2016-05-09 14:50:08
+I0406 16:42:30.287428  2876 SimulationTradeDataApi.cpp:483] [InsertRsp] ReqId:23 OrderId:8 Time:2016-05-09 14:50:09 Status:1
+I0406 16:42:30.288429  2876 SimulationTradeDataApi.cpp:488] [OrderStatusChange] ReqId:23 OrderId:8 Code:000001.SZ Price:10.330000 Vol:100 Time:2016-05-09 14:50:09 Status:2 DPrice:0.000000 DVol:0
+I0406 16:42:30.289429  2876 SimulationTradeDataApi.cpp:627] [OrderStatusChange] ReqId:23 OrderId:8 Code:000001.SZ Price:10.330000 Vol:100 Time:2016-05-09 14:50:09 Status:-7 DPrice:10.330000 DVol:100
+E0406 16:42:30.289429  2876 SimulationTradeDataApi.cpp:630] [OrderMatch] ReqId:23 OrderId8 TradeId:5 MatcyPrice:10.330000 MatchVol:100 MatchTime:2016-05-09 14:50:09
+I0406 16:42:30.290429  2876 SimulationTradeDataApi.cpp:322] [InsertReq] ReqId:23 Code:000001.SZ Price:10.330000 Vol:100 Time:2016-05-09 14:50:09
+I0406 16:42:30.290429  2876 SimulationTradeDataApi.cpp:483] [InsertRsp] ReqId:24 OrderId:9 Time:2016-05-09 14:50:09 Status:1
+I0406 16:42:30.292429  2876 SimulationTradeDataApi.cpp:488] [OrderStatusChange] ReqId:24 OrderId:9 Code:000001.SZ Price:10.330000 Vol:100 Time:2016-05-09 14:50:09 Status:2 DPrice:0.000000 DVol:0
+I0406 16:42:30.292429  2876 SimulationTradeDataApi.cpp:322] [InsertReq] ReqId:24 Code:000001.SZ Price:10.330000 Vol:100 Time:2016-05-09 14:50:09
+I0406 16:42:30.293429  2876 SimulationTradeDataApi.cpp:483] [InsertRsp] ReqId:25 OrderId:10 Time:2016-05-09 14:50:11 Status:1
+I0406 16:42:30.294430  2876 SimulationTradeDataApi.cpp:488] [OrderStatusChange] ReqId:25 OrderId:10 Code:600000.SH Price:17.470000 Vol:100 Time:2016-05-09 14:50:11 Status:2 DPrice:0.000000 DVol:0
+I0406 16:42:30.294430  2876 SimulationTradeDataApi.cpp:322] [InsertReq] ReqId:25 Code:600000.SH Price:17.470000 Vol:100 Time:2016-05-09 14:50:11
+I0406 16:42:30.294430  2876 SimulationTradeDataApi.cpp:494] [Error]InsertRsp ReqId:26 ErrorCode:209
+I0406 16:42:30.294430  2876 SimulationTradeDataApi.cpp:322] [InsertReq] ReqId:26 Code:600000.SH Price:17.470000 Vol:100 Time:2016-05-09 14:50:11
+I0406 16:42:30.294430 10764 SimulationTradeDataApi.cpp:627] [OrderStatusChange] ReqId:24 OrderId:9 Code:000001.SZ Price:10.330000 Vol:100 Time:2016-05-09 14:50:09 Status:-7 DPrice:10.330000 DVol:100
+E0406 16:42:30.296429 10764 SimulationTradeDataApi.cpp:630] [OrderMatch] ReqId:24 OrderId9 TradeId:6 MatcyPrice:10.330000 MatchVol:100 MatchTime:2016-05-09 14:50:11
+I0406 16:42:30.297430  2876 SimulationTradeDataApi.cpp:483] [InsertRsp] ReqId:27 OrderId:11 Time:2016-05-09 14:50:12 Status:1
+I0406 16:42:30.298429  2876 SimulationTradeDataApi.cpp:488] [OrderStatusChange] ReqId:27 OrderId:11 Code:000001.SZ Price:10.330000 Vol:100 Time:2016-05-09 14:50:12 Status:2 DPrice:0.000000 DVol:0
+I0406 16:42:30.300429  2876 SimulationTradeDataApi.cpp:627] [OrderStatusChange] ReqId:27 OrderId:11 Code:000001.SZ Price:10.330000 Vol:100 Time:2016-05-09 14:50:12 Status:-7 DPrice:10.330000 DVol:100
+E0406 16:42:30.301429  2876 SimulationTradeDataApi.cpp:630] [OrderMatch] ReqId:27 OrderId11 TradeId:7 MatcyPrice:10.330000 MatchVol:100 MatchTime:2016-05-09 14:50:12
+I0406 16:42:30.301429  2876 SimulationTradeDataApi.cpp:322] [InsertReq] ReqId:27 Code:000001.SZ Price:10.330000 Vol:100 Time:2016-05-09 14:50:12
+I0406 16:42:30.301429  2876 SimulationTradeDataApi.cpp:483] [InsertRsp] ReqId:28 OrderId:12 Time:2016-05-09 14:50:12 Status:1
+I0406 16:42:30.302429  2876 SimulationTradeDataApi.cpp:488] [OrderStatusChange] ReqId:28 OrderId:12 Code:000001.SZ Price:10.330000 Vol:100 Time:2016-05-09 14:50:12 Status:2 DPrice:0.000000 DVol:0
+I0406 16:42:30.302429  2876 SimulationTradeDataApi.cpp:322] [InsertReq] ReqId:28 Code:000001.SZ Price:10.330000 Vol:100 Time:2016-05-09 14:50:12
+I0406 16:42:30.303429 10764 SimulationTradeDataApi.cpp:627] [OrderStatusChange] ReqId:28 OrderId:12 Code:000001.SZ Price:10.330000 Vol:100 Time:2016-05-09 14:50:12 Status:-7 DPrice:10.330000 DVol:100
+E0406 16:42:30.303429 10764 SimulationTradeDataApi.cpp:630] [OrderMatch] ReqId:28 OrderId12 TradeId:8 MatcyPrice:10.330000 MatchVol:100 MatchTime:2016-05-09 14:50:12
+I0406 16:42:30.304430  2876 SimulationTradeDataApi.cpp:483] [InsertRsp] ReqId:29 OrderId:13 Time:2016-05-09 14:50:14 Status:1
+I0406 16:42:30.305429  2876 SimulationTradeDataApi.cpp:488] [OrderStatusChange] ReqId:29 OrderId:13 Code:600000.SH Price:17.480000 Vol:100 Time:2016-05-09 14:50:14 Status:2 DPrice:0.000000 DVol:0
+I0406 16:42:30.306430  2876 SimulationTradeDataApi.cpp:627] [OrderStatusChange] ReqId:29 OrderId:13 Code:600000.SH Price:17.480000 Vol:100 Time:2016-05-09 14:50:14 Status:-7 DPrice:17.480000 DVol:100
+E0406 16:42:30.306430  2876 SimulationTradeDataApi.cpp:630] [OrderMatch] ReqId:29 OrderId13 TradeId:9 MatcyPrice:17.480000 MatchVol:100 MatchTime:2016-05-09 14:50:14
+I0406 16:42:30.307430  2876 SimulationTradeDataApi.cpp:322] [InsertReq] ReqId:29 Code:600000.SH Price:17.480000 Vol:100 Time:2016-05-09 14:50:14
+I0406 16:42:30.307430  2876 SimulationTradeDataApi.cpp:483] [InsertRsp] ReqId:30 OrderId:14 Time:2016-05-09 14:50:14 Status:1
+I0406 16:42:30.308430  2876 SimulationTradeDataApi.cpp:488] [OrderStatusChange] ReqId:30 OrderId:14 Code:600000.SH Price:17.480000 Vol:100 Time:2016-05-09 14:50:14 Status:2 DPrice:0.000000 DVol:0
+I0406 16:42:30.308430  2876 SimulationTradeDataApi.cpp:322] [InsertReq] ReqId:30 Code:600000.SH Price:17.480000 Vol:100 Time:2016-05-09 14:50:14
+I0406 16:42:30.308430  2876 SimulationTradeDataApi.cpp:483] [InsertRsp] ReqId:31 OrderId:15 Time:2016-05-09 14:50:15 Status:1
+I0406 16:42:30.309430  2876 SimulationTradeDataApi.cpp:488] [OrderStatusChange] ReqId:31 OrderId:15 Code:000001.SZ Price:10.330000 Vol:100 Time:2016-05-09 14:50:15 Status:2 DPrice:0.000000 DVol:0
+I0406 16:42:30.310431  2876 SimulationTradeDataApi.cpp:627] [OrderStatusChange] ReqId:31 OrderId:15 Code:000001.SZ Price:10.330000 Vol:100 Time:2016-05-09 14:50:15 Status:-7 DPrice:10.330000 DVol:100
+E0406 16:42:30.310431  2876 SimulationTradeDataApi.cpp:630] [OrderMatch] ReqId:31 OrderId15 TradeId:10 MatcyPrice:10.330000 MatchVol:100 MatchTime:2016-05-09 14:50:15
+I0406 16:42:30.310431  2876 SimulationTradeDataApi.cpp:322] [InsertReq] ReqId:31 Code:000001.SZ Price:10.330000 Vol:100 Time:2016-05-09 14:50:15
+I0406 16:42:30.311430  2876 SimulationTradeDataApi.cpp:483] [InsertRsp] ReqId:32 OrderId:16 Time:2016-05-09 14:50:15 Status:1
+I0406 16:42:30.312430  2876 SimulationTradeDataApi.cpp:488] [OrderStatusChange] ReqId:32 OrderId:16 Code:000001.SZ Price:10.330000 Vol:100 Time:2016-05-09 14:50:15 Status:2 DPrice:0.000000 DVol:0
+I0406 16:42:30.312430  2876 SimulationTradeDataApi.cpp:322] [InsertReq] ReqId:32 Code:000001.SZ Price:10.330000 Vol:100 Time:2016-05-09 14:50:15
+I0406 16:42:30.312430  2876 SimulationTradeDataApi.cpp:483] [InsertRsp] ReqId:33 OrderId:17 Time:2016-05-09 14:50:17 Status:1
+I0406 16:42:30.313431  2876 SimulationTradeDataApi.cpp:488] [OrderStatusChange] ReqId:33 OrderId:17 Code:600000.SH Price:17.460000 Vol:100 Time:2016-05-09 14:50:17 Status:2 DPrice:0.000000 DVol:0
+I0406 16:42:30.313431  2876 SimulationTradeDataApi.cpp:322] [InsertReq] ReqId:33 Code:600000.SH Price:17.460000 Vol:100 Time:2016-05-09 14:50:17
+I0406 16:42:30.313431  2876 SimulationTradeDataApi.cpp:494] [Error]InsertRsp ReqId:34 ErrorCode:209
+I0406 16:42:30.313431  2876 SimulationTradeDataApi.cpp:322] [InsertReq] ReqId:34 Code:600000.SH Price:17.460000 Vol:100 Time:2016-05-09 14:50:17
+I0406 16:42:30.314430 10764 SimulationTradeDataApi.cpp:627] [OrderStatusChange] ReqId:32 OrderId:16 Code:000001.SZ Price:10.330000 Vol:100 Time:2016-05-09 14:50:15 Status:-7 DPrice:10.330000 DVol:100
+E0406 16:42:30.314430 10764 SimulationTradeDataApi.cpp:630] [OrderMatch] ReqId:32 OrderId16 TradeId:11 MatcyPrice:10.330000 MatchVol:100 MatchTime:145018000
+I0406 16:42:30.315430  2876 SimulationTradeDataApi.cpp:494] [Error]InsertRsp ReqId:35 ErrorCode:209
+I0406 16:42:30.315430  2876 SimulationTradeDataApi.cpp:322] [InsertReq] ReqId:35 Code:000001.SZ Price:10.340000
