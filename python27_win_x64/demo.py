@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from PT_QuantBaseApi import GetDataCallBack, GetDataApi, SimulationGetDataApi, TradeDataCallBack, TradeDataApi, SimulationTradeDataApi
+from PT_QuantBaseApi import GetDataCallBack, TradeDataCallBack, PT_QuantBaseApi_Python27
 
 class TradeCallBack(TradeDataCallBack):
 	def __init__(self):
@@ -103,10 +103,10 @@ class DataCallBack(GetDataCallBack):
 
 def main():
 	tspi = TradeDataCallBack()
-	t = SimulationTradeDataApi(tspi)
+	t = PT_QuantBaseApi_Python27.TradeDataApi(tspi, True)
 
 	mspi = DataCallBack(t);
-	mapi = SimulationGetDataApi(mspi, t, True, 3000);
+	mapi = PT_QuantBaseApi_Python27.GetDataApi(mspi, None);
 
 	mapi.Login("Test","Test")
 	t.Login("Test", "Test")
