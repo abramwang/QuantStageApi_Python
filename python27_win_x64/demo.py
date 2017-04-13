@@ -111,16 +111,6 @@ def main():
 	mapi.Login("Test","Test")
 	t.Login("Test", "Test")
 
-	dayLineList = mapi.GetDayKline("000782.SZ", "2016-12-01", "2016-12-22")
-	print(dayLineList[0])
-
-	MA = (dayLineList[-1]["nClose"] + dayLineList[-2]["nClose"] + dayLineList[-3]["nClose"] + dayLineList[-4]["nClose"])/4
-
-	#print(factors)
-	print(MA)
-
-	mspi.SetEMA(MA)
-	
 	#mapi.ReqRealtimeData(["000782.SZ"], False, 93000000)
 	mapi.EnableKlineCreater(["minute", "minute_5"])
 	mapi.ReqHistoryData("2016-12-23 9:30:00", "2016-12-23 24:00:00", ["000782.SZ"], False)
