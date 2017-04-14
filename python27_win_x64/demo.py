@@ -102,6 +102,12 @@ class DataCallBack(GetDataCallBack):
 
 
 def main():
+	PT_QuantBaseApi_Python27.enableLog()
+	subCodes = []
+	file_object = open('stock_symbol_list.txt')
+	for line in file_object:
+		subCodes.append(line[0:6])
+
 	tspi = TradeDataCallBack()
 	t = PT_QuantBaseApi_Python27.TradeDataApi(tspi, True)
 
@@ -113,16 +119,8 @@ def main():
 
 	#mapi.ReqRealtimeData(["000782.SZ"], False, 93000000)
 	mapi.EnableKlineCreater(["minute", "minute_5"])
-	mapi.ReqHistoryData("2016-12-23 9:30:00", "2016-12-23 24:00:00", ["000782.SZ"], False)
+	mapi.ReqHistoryData("2016-12-23 9:30:00", "2016-12-23 24:00:00", subCodes, False)
 	#mapi.ReqHistoryData("minute", "2016-12-23 9:30:00", "2016-12-23 24:00:00", ["000782.SZ"], False)
-
-
-
-	while True:
-		#time.sleep(15)
-		#x, y = t.OrderInsert(newOrderReq)
-		pass
-
 
 if __name__ == '__main__':
 	main()
