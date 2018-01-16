@@ -2,17 +2,18 @@
 
 模块类库结构
 
-```scheme
+```
 └─QuantPlus_BaseApi
-	├─GetDataCallBack (obj)
-	├─TradeDataCallBack (obj)
+	├─GetDataCallBack
+	├─TradeDataCallBack
 	└─QuantPlusApi
-		├─GetDataApi (obj)
-		├─TradeDataApi (obj)
-		├─getQuantPlatformApiVersion (fun)
-		├─enableLog (fun)
-		├─run (fun)
-		└─terminate (fun)
+		├─GetDataApi
+		├─TradeDataApi
+		│
+		├─getQuantPlatformApiVersion
+		├─enableLog
+		├─run
+		└─terminate
 ```
 ## GetDataCallBack  [详情](https://github.com/abramwang/QuantPlusApi_Python/blob/master/doc/GetDataCallBack.md "详情")
 
