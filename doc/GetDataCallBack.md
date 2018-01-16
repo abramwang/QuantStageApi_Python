@@ -1,50 +1,88 @@
 # GetDataCallBack (行情回调)
 
-### RecvCode（data）
+类结构定义：
 
-代码表回调，每次登陆成功后会自动出发
+```python
+class GetDataCallBack(QuantPlusApi.GetDataSpi):
+	def __init__(self):
+		super(GetDataCallBack, self).__init__()
+		pass
+	#重载回调
+	def OnRecvCodes(self, codes, optionCodes):
+		pass
+	def OnRecvDayBegin(self, data):
+		pass
+	def OnRecvMarket(self, data):
+		pass
+	def OnRecvTransaction(self, data):
+		pass
+	def OnRecvOrderQueue(self, data):
+		pass
+	def OnRecvOrder(self, data):
+		pass
+	def OnRecvDayEnd(self, data):
+		pass
+	def OnRecvKLine(self, data):
+		pass
+	def OnRecvOver(self):
+		pass
+```
 
-回调参数data为
 
-```json
-{
-  "codes":[
-    {
+
+### 1 代码表回调
+
+```python
+def RecvCode(self, codes, optionCodes):
+    pass
+```
+
+每次登陆成功后会自动出发
+
+回调参数codes为
+
+```python
+[
+  {
+  "nType": 0,
+  "szCNName": "浦发银行",
+  "szENName": "",
+  "szMarket": "SH",
+  "szCode": "600000",
+  "szWindCode": "600000.SH",
+  },
+  ...
+],
+```
+
+回调参数optionCodes为
+
+```python
+[
+  {
+    "baseCode" : {
       "nType": 0,
-      "szCNName": "浦发银行",
+      "szCNName": "",
       "szENName": "",
       "szMarket": "SH",
-      "szCode": "600000",
-      "szWindCode": "600000.SH",
+      "szCode": "10000183",
+      "szWindCode": "10000183.SH",
     },
-    ...
-  ],
-  "options":[
-    {
-      "baseCode" : {
-        "nType": 0,
-        "szCNName": "",
-        "szENName": "",
-        "szMarket": "SH",
-        "szCode": "10000183",
-        "szWindCode": "10000183.SH",
-      },
-      "szContractID" : "510050C1512M03000",
-      "szUnderlyingSecurityID" : "510050",
-      "chCallOrPut" : "C",
-      "szExerciseDate" : "2015-12-23",
-      "chUnderlyingType" : "\u0001",
-      "chOptionType" : "E",
-      "chPriceLimitType" : "N",
-      "nContractMultiplierUnit" : 10000,
-      "nExercisePrice" : 30000,
-      "szStartDate" : "2015-04-23",
-      "szEndDate" : "2015-12-23",
-      "szExpireDate" : "2015-12-23"
-    },
-    ...
-  ]
-}
+    "szContractID" : "510050C1512M03000",
+    "szUnderlyingSecurityID" : "510050",
+    "chCallOrPut" : "C",
+    "szExerciseDate" : "2015-12-23",
+    "chUnderlyingType" : "\u0001",
+    "chOptionType" : "E",
+    "chPriceLimitType" : "N",
+    "nContractMultiplierUnit" : 10000,
+    "nExercisePrice" : 30000,
+    "szStartDate" : "2015-04-23",
+    "szEndDate" : "2015-12-23",
+    "szExpireDate" : "2015-12-23"
+  },
+  ...
+]
 ```
 
 其中 codes 为证券标的代码列表，字段说明如下
@@ -76,13 +114,18 @@
 | szEndDate               | string | 期权最后交易日/行权日，YYYY-MM-DD。                  |
 | szExpireDate            | string | 期权到期日，YYYY-MM-DD。                        |
 
-### RecvMarket（data）
+### 2 标的行情快照推送
+
+```python
+def RecvMarket(self, data):
+  pass
+```
 
 标的行情快照推送，每次交易所有快照数据推送时该回调函数会自动触发
 
 回调参数data为
 
-```
+```python
 {
 	"szType" : "stock",
 	"szWindCode" : "600000.SH",
@@ -123,8 +166,8 @@
 | nBidVol      | double List | 10   | 申买量10档                        |
 | nHighLimited | double      |      | 涨停价                           |
 | nLowLimited  | double      |      | 跌停价                           |
-| iVolume      | double      |      | 成交总量（当日开盘至今）   |
-| iTurnover    | double      |      | 成交总金额（当日开盘至今）     |
+| iVolume      | double      |      | 成交总量（当日开盘至今）                  |
+| iTurnover    | double      |      | 成交总金额（当日开盘至今）                 |
 
 其中**期货/期权**字段说明如下
 
@@ -164,12 +207,18 @@
 | iVolume    | double |      | 成交总量（当日开盘至今）                  |
 | iTurnover  | double |      | 成交总金额（当日开盘至今）                 |
 
-### RecvTransaction（data）
+### 3 标的逐笔成交数据推送
+
+```python
+def RecvTransaction(self, data)
+	pass
+```
+
 标的逐笔成交数据推送，每次交易所有订单成交撮合成功时该回调函数会自动触发
 
 回调参数data为
 
-```
+```python
 {
 	"szType" : "transaction",
 	"szWindCode" : "600000.SH",
@@ -194,12 +243,18 @@
 | nTurnover  | double | 成交金额                          |
 | nBSFlag    | int    | 买卖方向   42（买）    53（卖）         |
 
-### RecvOrderQueue（data）
-标的买一/买一委托队列数据推送，与行情快照数据推送频率一致
+### 4 标的买一/买一委托队列数据推送 
+
+```python
+def RecvOrderQueue(self, data)
+	pass
+```
+
+与行情快照数据推送频率一致
 
 回调参数data为
 
-```
+```python
 {
 	"szType" : "orderQueue",
 	"szWindCode" : "600000.SH",
@@ -224,12 +279,18 @@
 | nOrders       | double      | 委托数量                          |
 | nABVolumeList | double list | 委托申报量明细                       |
 
-### RecvOrder（data）
-标的逐笔委托数据推送，一旦在交易所有交易者申报委托成功，便会推送此数据，该数据仅在深市标的有推送
+### 5 标的逐笔委托数据推送 
+
+```python
+def RecvOrder(self, data):
+  pass
+```
+
+一旦在交易所有交易者申报委托成功，便会推送此数据，该数据仅在深市标的有推送
 
 回调参数data为
 
-```
+```python
 {
 	"szType" : "order",
 	"szWindCode" : "600000.SH",
@@ -254,20 +315,36 @@
 | chOrderKind    | int    | 委托类型        42（买）    53（卖）    |
 | chFunctionCode | int    | 委托类型（申报，撤单..）                 |
 
-### RecvDayBegin（data）
+### 6 交易日开盘信号 
 
-交易日开盘信号，data为交易日信息
+```python
+def RecvDayBegin(self, data)
+	pass
+```
 
-### RecvDayEnd（data）
+data为交易日信息
 
-交易日收盘信号，data为交易日信息
+### 7 交易日收盘信号 
 
-### RecvKLine（data）
-标的逐笔k线数据推送，等周期推送
+```python	
+def RecvDayEnd(self, data)
+	pass
+```
+
+data为交易日信息
+
+### 8 标的逐笔k线数据推送 
+
+```python 
+def RecvKLine(self, data)
+	pass
+```
+
+等周期推送
 
 回调参数data为
 
-```
+```python
 {
 	"szType" : "kLine",
 	"szWindCode" : "600000.SH",
@@ -301,5 +378,11 @@
 | iVolume    | double | 成交总量（k线周期内）                              |
 | iTurnover  | double | 成交总金额（k线周期内）                             |
 | szCycType  | string | 周期类型   second_10，minute，minute_5，minute_15， minute_30， hour， day |
-### RecvOver（）
+### 9 历史数据结束回调
+
+```python
+def RecvOver(self):
+  pass
+```
+
 在请求历史数据完成后，该回调会被触发
