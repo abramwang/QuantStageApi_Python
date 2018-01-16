@@ -123,8 +123,9 @@
 | nBidVol      | double List | 10   | 申买量10档                        |
 | nHighLimited | double      |      | 涨停价                           |
 | nLowLimited  | double      |      | 跌停价                           |
-| iVolume      | double      |      | 成交总量（当日开盘至今）                  |
-| iTurnover    | double      |      | 成交总金额（当日开盘至今）                 |
+| iVolume      | double      |      | 成交总量（当日开盘至今）   |
+| iTurnover    | double      |      | 成交总金额（当日开盘至今）     |
+
 其中**期货/期权**字段说明如下
 
 | 字段名          | 参数类型        | 长度   | 说明                            |
