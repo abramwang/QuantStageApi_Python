@@ -126,7 +126,7 @@ if __name__ == '__main__':
 
 交易回调模块，所有交易信息的推送都是这个类，这个类提供了不同的数据回调函数，需要通过继承->重载的方式来实现策略的编写
 
-**QuantPlusApi** [详情](https://github.com/abramwang/QuantPlusApi_Python/blob/master/doc/QuantPlusApi.md "详情")
+**QuantPlusApi** [详情](https://github.com/abramwang/QuantPlusApi_Python/blob/master/doc/ "详情")
 
 主动请求接口，提供了具体和交易服务器，行情服务器通信，撮合引擎的通信，账户验证等功能的封装。
 
