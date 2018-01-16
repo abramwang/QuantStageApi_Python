@@ -8,91 +8,122 @@ QuantPlus_Api_Python 是 QuantPlus_Api 接口的 Python 实现
 
 ## 安装方法
 
-你可以通过 [GitHub Releases](https://github.com/abramwang/PT_QuantBaseApi_Cpp/releases"GitHub Releases") 下载最新的版本并解压至任意目录下
+你可以通过在以下 [地址](https://github.com/abramwang/QuantPlusApi_Python/tree/master/download "下载地址")  下载最新的版本，其中提供了如下版本
+
+####Window版本
+
+* [python27](https://github.com/abramwang/QuantPlusApi_Python/blob/master/download/win_python27_x64.rar "python27")
+* [python35](https://github.com/abramwang/QuantPlusApi_Python/blob/master/download/linux_python35_x64.rar "python35")
+* [python36](https://github.com/abramwang/QuantPlusApi_Python/blob/master/download/linux_python36_x64.rar "python36")
+
+ ####Linux版本
+
+* [python27](https://github.com/abramwang/QuantPlusApi_Python/blob/master/download/linux_python27_x64.rar "python27_linux")
+* [python35](https://github.com/abramwang/QuantPlusApi_Python/blob/master/download/linux_python35_x64.rar "python35_linux")
+* [python36](https://github.com/abramwang/QuantPlusApi_Python/blob/master/download/linux_python36_x64.rar "python36_linux")
+
+
+下载完成后解压至任意目录下。其中，windows版本的目录结构如下
+
+```
+├─QuantPlus_BaseApi
+│	├─__init__.py
+│	├─QuantPlusApi.pyd
+│	└─*.dll
+└─demo.py
+```
+
+其中目录QuantPlus_BaseApi 是核心库，可以将其copy到python环境下的site-package目录下，或者所有用户代码保持与QuantPlus_BaseApi 在同级目录下即可。
+
+linux 版本目录结构如下
+
+```
+├─QuantPlus_BaseApi
+│	├─__init__.py
+│	└─QuantPlusApi.so
+├─lib
+│	└─*.so
+└─demo.py
+```
+其中目录QuantPlus_BaseApi 是核心库，lib目录为系统以来库，在运行代码时需要将lib下的文件导入到环境变量**LD_LIBRARY_PATH**下
+
+只需要像使用其他python 库一样使用
+
+```
+import QuantPlus_BaseApi
+```
+
+ 或者 
+
+```
+from QuantPlus_BaseApi import *
+```
+
+即可开始自己的策略编写了。
+
+其中 demo.py 是初始的一个示例代码，
 
 ## 快速开始
 
 我们创建一个简单的订阅平安银行的实时level2行情数据的demo
 
-#### demo.cpp
+#### demo.py
 
 ```c++
-#ifndef WIN32
-typedef long long __int64;
-#endif
-#include <vector>
-#include <string>
-#include <iostream>
-using namespace std;
+# -*- coding: utf-8 -*-
+from QuantPlus_BaseApi import GetDataCallBack, QuantPlusApi
 
-#include <GetDataStruct.h>
-#include <GetDataApi.h>
+class DataCallBack(GetDataCallBack):
+	def __init__(self):
+		super(DataCallBack, self).__init__()
 
-using namespace PT_QuantPlatform;
+	def OnRecvCodes(self, codes, optionCodes):
+		print("OnRecvCodes: ",codes, optionCodes)
+		pass
+	def OnRecvDayBegin(self, dateStr):
+		print("OnRecvDayBegin: ", dateStr)
+		pass
+	def OnRecvMarket(self, market):
+		print(market)
+		pass
+	def OnRecvTransaction(self, transaction):
+		#print("OnRecvTransaction: ", transaction)
+		pass
+	def OnRecvDayEnd(self, dateStr):
+		print("OnRecvDayEnd: ", dateStr)
+		pass
+	def OnRecvKLine(self, kLine):
+		pass
+	def OnRecvOver(self):
+		print("OnRecvOver")
+		pass
+		
 
-//创建一个自己的回调数据处理类
-class MySpi : public GetDataSpi{
-private:
-public:
-	MySpi(){};
-	~MySpi(){};
-public:
-	void OnRecvMarket(TDF_MARKET_DATA* pMarket){
-		cout << "OnRecvMarket: " << pMarket->szWindCode << " " << pMarket->nTime << endl;
-	};
-};
 
-int main(int argc, char const *argv[])
-{
-	MySpi* spi = new MySpi();
-	
-	GD_API_InitSetting setting = {true, true, true, 1000};
-    PT_QuantPlatform::Init(setting);
-	int err = 0;
-	GetDataApi* api = PT_QuantPlatform::CreateGetDataApi(spi);
-	
-	if(!err){
-		if(api->Login("Test", "Test", err)){	
-			std::vector<char*> subCodes;
-			subCodes.push_back("000001");
+def main():
+	QuantPlusApi.enableLog()
 
-			api->ReqRealtimeData(subCodes, false, 0, 0, err);
-		}
-	}
-  	
-	while(1){
-      sleep(1);
-	}	
-  
-	return 0;
-}
+	mspi = DataCallBack();
+	mapi = QuantPlusApi.GetDataApi(mspi, None);
+
+	mapi.Login("Test","Test")
+
+	mapi.ReqHistoryData("2017-01-01 9:30:00", "2017-01-04 24:00:00", ["000782.SZ", "600000.SH", "600004.SH"], False)
+
+
+if __name__ == '__main__':
+	main()
 ```
+##文档
 
+整个 QuantPlus_BaseApi 提供了3个模块
 
+####GetDataCallBack
 
-### 编译
+行情回调模块，所有行情信息的推送都是这个类，这个类提供了不同的数据回调函数，需要通过继承->重载的方式来实现策略的编写
 
-####示例makefile
+####TradeDataCallBack
 
-```cmake
-INC_PATH := -I../include/
-LIB_PATH := -L../lib_gcc/
-LIBS     := $(LIB_PATH) -lPTQuantBaseApi -lsnappy -lboost_thread -lboost_system -ljson_linux-gcc-4.8.5_libmt -lboost_locale
-CC       := gcc
-LD       := g++
-CFLAGS   := -O2 -Wall $(INC_PATH)
-SRC_PATH := ./
-SOURCE   := $(SRC_PATH)/demo.cpp
-			
-TARGET   := demo
-OBJS     := demo.o
-$(TARGET): $(OBJS)
-	$(LD) -O2 -o $(TARGET) $(OBJS) $(LIBS)
-demo.o : $(SRC_PATH)/demo.cpp
-	$(CC) $(CFLAGS) -c $(SRC_PATH)/demo.cpp -o $@
-.PHONY: clean
-clean:
-	-rm -rf $(OBJS)
-cleanT:
-	-rm -rf $(TARGET)
-```
+交易回调模块，所有交易信息的推送都是这个类，这个类提供了不同的数据回调函数，需要通过继承->重载的方式来实现策略的编写
+
+####QuantPlusApi
