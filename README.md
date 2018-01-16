@@ -10,13 +10,13 @@ QuantPlus_Api_Python 是 QuantPlus_Api 接口的 Python 实现
 
 你可以通过在以下 [地址](https://github.com/abramwang/QuantPlusApi_Python/tree/master/download "下载地址")  下载最新的版本，其中提供了如下版本
 
-####Window版本
+**Window版本**
 
 * [python27](https://github.com/abramwang/QuantPlusApi_Python/blob/master/download/win_python27_x64.rar "python27")
 * [python35](https://github.com/abramwang/QuantPlusApi_Python/blob/master/download/linux_python35_x64.rar "python35")
 * [python36](https://github.com/abramwang/QuantPlusApi_Python/blob/master/download/linux_python36_x64.rar "python36")
 
- ####Linux版本
+ **Linux版本**
 
 * [python27](https://github.com/abramwang/QuantPlusApi_Python/blob/master/download/linux_python27_x64.rar "python27_linux")
 * [python35](https://github.com/abramwang/QuantPlusApi_Python/blob/master/download/linux_python35_x64.rar "python35_linux")
@@ -65,9 +65,9 @@ from QuantPlus_BaseApi import *
 
 ## 快速开始
 
-我们创建一个简单的订阅平安银行的实时level2行情数据的demo
+我们创建一个简单的订阅平安银行的历史level2行情数据的demo
 
-#### demo.py
+**demo.py**
 
 ```c++
 # -*- coding: utf-8 -*-
@@ -98,8 +98,6 @@ class DataCallBack(GetDataCallBack):
 		print("OnRecvOver")
 		pass
 		
-
-
 def main():
 	QuantPlusApi.enableLog()
 
@@ -114,16 +112,19 @@ def main():
 if __name__ == '__main__':
 	main()
 ```
-##文档
+
+
+## 文档
 
 整个 QuantPlus_BaseApi 提供了3个模块
 
-####GetDataCallBack
+**GetDataCallBack**
 
 行情回调模块，所有行情信息的推送都是这个类，这个类提供了不同的数据回调函数，需要通过继承->重载的方式来实现策略的编写
 
-####TradeDataCallBack
+**TradeDataCallBack**
 
 交易回调模块，所有交易信息的推送都是这个类，这个类提供了不同的数据回调函数，需要通过继承->重载的方式来实现策略的编写
 
-####QuantPlusApi
+**QuantPlusApi**
+
