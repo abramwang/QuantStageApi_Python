@@ -1,4 +1,0 @@
-Log file created at: 2017/04/06 16:16:03
-Running on machine: ABRAM-ALIEN
-Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
-I0406 16:16:03.502671  9056 TradeDataApi.cpp:273] [CreateSyncSimulationTradeDataApi] Sucessfull
