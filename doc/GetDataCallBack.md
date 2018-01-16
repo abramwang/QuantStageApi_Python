@@ -1,6 +1,6 @@
 # GetDataCallBack (行情回调)
 
-类结构定义：
+类定义：
 
 ```python
 class GetDataCallBack(QuantPlusApi.GetDataSpi):

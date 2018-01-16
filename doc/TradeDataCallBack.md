@@ -1,15 +1,53 @@
-# TradeDataCallBack 
+# TradeDataCallBack（交易回调） 
+
+类定义：
+
+```python 
+class TradeDataCallBack(QuantPlusApi.TradeDataSpi):
+	def __init__(self):
+		super(TradeDataCallBack, self).__init__()
+		pass
+	#重载回调
+	def OnRspUserTradeInfo(self, userInfo):
+		pass
+	def OnRspOrderInsert(self, rsp, err):
+		pass
+	def OnRspOrderModify(self, rsp, err):
+		pass
+	def OnRspOrderDelete(self, rsp, err):
+		pass
+	def OnRspQryOrder(self, rsp, err, isEnd):
+		pass
+	def OnRspQryMatch(self, rsp, err, isEnd):
+		pass
+	def OnRspQryPosition(self, rsp, err, isEnd):
+		pass
+	def OnRspQryCapitalAccount(self, rsp, err, isEnd):
+		pass
+	def OnRspQrySecuDebt(self, rsp, err, isEnd):
+		pass
+	def OnRspQryMaxEntrustCount(self, rsp, err, isEnd):
+		pass
+	def OnRspQrySecuritiesLendingAmount(self, rsp, err, isEnd):
+		pass
+	def OnRtnOrderStatusChangeNotice(self, rtn):
+		pass
+	def OnRtnOrderMatchNotice(self, rtn):
+		pass
+```
+
+
 
 ### 1 用户登录回调
 
 ```python
-RspUserTradeInfo(dict tradeData)
+def RspUserTradeInfo(self, tradeData):
+    pass
 ```
 
 | 参数        | 类型   | 说明       |
 | --------- | ---- | -------- |
 | tradeData | dict | 用户登录信息回调 |
-|           |      |          |
 
 tradeData各项字段说明：
 
@@ -20,7 +58,6 @@ tradeData各项字段说明：
 | szUserNickName | string | 用户别名   |
 | szSecurityCode | string | 安全码    |
 | accoutList     | list   | 可用证券账号 |
-|                |        |        |
 
 accoutList各项字段说明：
 
@@ -33,42 +70,43 @@ accoutList各项字段说明：
 | nCommissions  | double | 佣金    |
 | nStampTax     | double | 印花税   |
 | nTransferFees | double | 过户费   |
-|               |        |       |
 
 ### 2 连接成功
 
 ```python
-RtnTDConnect()
+def RtnTDConnect():
+    pass
 ```
 
 ### 3 断开
 
 ```python
-RtnTDDisConnect()
+def RtnTDDisConnect():
+    pass
 ```
 
 ### 4 断线重连尝试状态
 
 ```python
-RtnTDReconnectStatus(bool successed)
+def RtnTDReconnectStatus(bool successed):
+    pass
 ```
 
 | 参数        | 类型   | 说明   |
 | --------- | ---- | ---- |
 | successed | bool |      |
-|           |      |      |
 
 ### 5 插入订单回调
 
 ```python
-RspOrderInsert(dict tradeData, int error)
+def RspOrderInsert(self, tradeData, error):
+    pass
 ```
 
 | 参数        | 类型   | 说明     |
 | --------- | ---- | ------ |
 | tradeData | dict | 插入订单回调 |
 | error     | int  | 错误码    |
-|           |      |        |
 
 tradeData各字段说明：
 
@@ -90,19 +128,18 @@ tradeData各字段说明：
 | nStatus         | int    | 状态（注：参见**数据字典1.3**）            |
 | nDealedPrice    | double | 成交均价                           |
 | nDealedVol      | int    | 成交总量                           |
-|                 |        |                                |
 
 ### 6 删除订单回调
 
 ```python
-RspOrderDelete(dict tradeData, int error)
+def RspOrderDelete(self, tradeData, error):
+    pass
 ```
 
 | 参数        | 类型   | 说明       |
 | --------- | ---- | -------- |
 | tradeData | dict | 删除订单回调数据 |
 | error     | int  | 错误码      |
-|           |      |          |
 
 tradeData各项字段说明：
 
@@ -115,12 +152,12 @@ tradeData各项字段说明：
 | nUserId     | int    | 客户端编号                |
 | nAccountId  | int    | 券商资金账户Id             |
 | nOrderId    | int    | 订单Id                 |
-|             |        |                      |
 
 ### 7 查询订单回调
 
 ```python
-RspQryOrder(dict tradeData, int error, bool isEnd)
+def RspQryOrder(self, tradeData, error, isEnd):
+    pass
 ```
 
 | 参数        | 类型   | 说明       |
@@ -128,7 +165,6 @@ RspQryOrder(dict tradeData, int error, bool isEnd)
 | tradeData | dict | 查询订单回调数据 |
 | error     | int  | 错误码      |
 | isEnd     | bool | 是否是最后一条  |
-|           |      |          |
 
 tradeData各项字段说明：
 
@@ -150,12 +186,12 @@ tradeData各项字段说明：
 | nStatus         | int    | 状态（注：参见**数据字典1.3**）            |
 | nDealedPrice    | double | 成交均价                           |
 | nDealedVol      | int    | 成交总量                           |
-|                 |        |                                |
 
 ### 8 查询成交回调
 
 ```python
-RspQryMatch(dict tradeData, int error, bool isEnd)
+def RspQryMatch(self, tradeData, error, isEnd):
+    pass
 ```
 
 | 参数        | 类型   | 说明       |
@@ -163,7 +199,6 @@ RspQryMatch(dict tradeData, int error, bool isEnd)
 | tradeData | dict | 查询成交回调数据 |
 | error     | int  | 错误码      |
 | isEnd     | bool | 是否是最后一条  |
-|           |      |          |
 
 tradeData各字段说明：
 
@@ -180,12 +215,12 @@ tradeData各字段说明：
 | nMatchVol      | int    | 成交量      |
 | szContractCode | string | 股票代码     |
 | szMatchTime    | string | 成交时间     |
-|                |        |          |
 
 ### 9 查询持仓回调
 
 ```python
-RspQryPosition(dict tradeData, int error, bool isEnd)
+def RspQryPosition(self, tradeData, error, isEnd):
+    pass
 ```
 
 | 参数        | 类型   | 说明       |
@@ -211,7 +246,8 @@ tradeData各字段说明：
 ### 10 查询资金帐号回调
 
 ```python
-RspQryCapitalAccount(dict tradeData, int error, bool isEnd)
+def RspQryCapitalAccount(self, tradeData, error, isEnd):
+    pass
 ```
 
 | 参数        | 类型   | 说明         |
@@ -235,7 +271,8 @@ tradeData各字段说明：
 ### 11 查询融券负债回调
 
 ```python
-RspQrySecuDebt(dict tradeData, int error, bool isEnd) 
+def RspQrySecuDebt(self, tradeData, error, isEnd):
+    pass
 ```
 
 | 参数        | 类型   | 说明         |
@@ -243,7 +280,6 @@ RspQrySecuDebt(dict tradeData, int error, bool isEnd)
 | tradeData | dict | 查询融券负债回调数据 |
 | error     | int  | 错误码        |
 | isEnd     | bool | 是否是最后一条    |
-|           |      |            |
 
 tradeData各字段说明：
 
@@ -260,14 +296,14 @@ tradeData各字段说明：
 ### 12 查询最大可委托量回调
 
 ```python
-RspQryMaxEntrustCount(dict tradeData, int error)
+def RspQryMaxEntrustCount(self, tradeData, error):
+    pass
 ```
 
 | 参数        | 类型   | 说明           |
 | --------- | ---- | ------------ |
 | tradeData | dict | 查询最大可成交量回调数据 |
 | error     | int  | 错误码          |
-|           |      |              |
 
 tradeData各字段说明：
 
@@ -283,7 +319,8 @@ tradeData各字段说明：
 ### 13 查询可融券列表回调
 
 ```python
-RspQrySecuritiesLendingAmount(dict tradeData, int error, bool isEnd)
+def RspQrySecuritiesLendingAmount(self, tradeData, error, isEnd):
+    pass
 ```
 
 | 参数        | 类型   | 说明          |
@@ -291,7 +328,6 @@ RspQrySecuritiesLendingAmount(dict tradeData, int error, bool isEnd)
 | tradeData | dict | 查询可融券列表回调数据 |
 | error     | int  | 错误码         |
 | isEnd     | bool | 是否是最后一条     |
-|           |      |             |
 
 tradeData各字段说明：
 
@@ -304,18 +340,17 @@ tradeData各字段说明：
 | nAccountId     | int    | 券商资金账户Id |
 | szContractCode | string | 股票代码     |
 | m_sepremQty    | int    | 余券       |
-|                |        |          |
 
 ### 14 订单状态变化通知
 
 ```python
-RtnOrderStatusChangeNotice(dict tradeData);
+def RtnOrderStatusChangeNotice(self, tradeData):
+    pass
 ```
 
 | 参数        | 类型   | 说明         |
 | --------- | ---- | ---------- |
 | tradeData | dict | 订单状态变化通知数据 |
-|           |      |            |
 
 tradeData各字段说明：
 
@@ -337,18 +372,17 @@ tradeData各字段说明：
 | nStatus         | int    | 状态（注：参见**数据字典1.3**）            |
 | nDealedPrice    | double | 成交均价                           |
 | nDealedVol      | int    | 成交总量                           |
-|                 |        |                                |
 
 ### 15 成交状态更新通知
 
 ```python
-RtnOrderStatusChangeNotice(dict tradeData);
+def RtnOrderStatusChangeNotice(self, tradeData):
+    pass
 ```
 
 | 参数        | 类型   | 说明         |
 | --------- | ---- | ---------- |
 | tradeData | dict | 成交状态更新通知数据 |
-|           |      |            |
 
 tradeData各字段说明：
 
@@ -365,7 +399,6 @@ tradeData各字段说明：
 | nMatchVol      | int    | 成交量      |
 | szContractCode | string | 股票代码     |
 | szMatchTime    | string | 成交时间     |
-|                |        |          |
 
 ##数据字典
 
