@@ -114,17 +114,30 @@ if __name__ == '__main__':
 ```
 
 
-## 文档
+## 文档 [详情](https://github.com/abramwang/QuantPlusApi_Python/tree/master/doc "详情")
 
 整个 QuantPlus_BaseApi 提供了3个模块
 
-**GetDataCallBack**
+**GetDataCallBack** [详情](https://github.com/abramwang/QuantPlusApi_Python/blob/master/doc/GetDataCallBack.md "详情")
 
 行情回调模块，所有行情信息的推送都是这个类，这个类提供了不同的数据回调函数，需要通过继承->重载的方式来实现策略的编写
 
-**TradeDataCallBack**
+**TradeDataCallBack** [详情](https://github.com/abramwang/QuantPlusApi_Python/blob/master/doc/TradeDataCallBack.md "详情")
 
 交易回调模块，所有交易信息的推送都是这个类，这个类提供了不同的数据回调函数，需要通过继承->重载的方式来实现策略的编写
 
-**QuantPlusApi**
+**QuantPlusApi** [详情](https://github.com/abramwang/QuantPlusApi_Python/blob/master/doc/QuantPlusApi.md "详情")
 
+主动请求接口，提供了具体和交易服务器，行情服务器通信，撮合引擎的通信，账户验证等功能的封装。
+
+## 示例
+以下提供了几个具体业务场景下的代码使用示例
+* [插入订单](https://github.com/abramwang/QuantPlusApi_Python/blob/master/doc/demo/%E6%8F%92%E5%85%A5%E8%AE%A2%E5%8D%95.md)
+* [查询当日所有订单](https://github.com/abramwang/QuantPlusApi_Python/blob/master/doc/demo/%E6%9F%A5%E8%AF%A2%E5%BD%93%E6%97%A5%E6%89%80%E6%9C%89%E8%AE%A2%E5%8D%95.md)
+* [查询资金账户](https://github.com/abramwang/QuantPlusApi_Python/blob/master/doc/demo/%E6%9F%A5%E8%AF%A2%E8%B5%84%E9%87%91%E8%B4%A6%E6%88%B7.md)
+* [订阅实时K线数据](https://github.com/abramwang/QuantPlusApi_Python/blob/master/doc/demo/%E8%AE%A2%E9%98%85%E5%AE%9E%E6%97%B6K%E7%BA%BF%E6%95%B0%E6%8D%AE.md)
+* [订阅实时tick数据](https://github.com/abramwang/QuantPlusApi_Python/blob/master/doc/demo/%E8%AE%A2%E9%98%85%E5%AE%9E%E6%97%B6tick%E6%95%B0%E6%8D%AE.md)
+* [获取详细日K线_并生成csv文件](https://github.com/abramwang/QuantPlusApi_Python/blob/master/doc/demo/%E8%8E%B7%E5%8F%96%E8%AF%A6%E7%BB%86%E6%97%A5K%E7%BA%BF_%E5%B9%B6%E7%94%9F%E6%88%90csv%E6%96%87%E4%BB%B6.md)
+* [连续请求某只股票tick数据存成csv文件](https://github.com/abramwang/QuantPlusApi_Python/blob/master/doc/demo/%E8%BF%9E%E7%BB%AD%E8%AF%B7%E6%B1%82%E6%9F%90%E5%8F%AA%E8%82%A1%E7%A5%A8tick%E6%95%B0%E6%8D%AE%E5%AD%98%E6%88%90csv%E6%96%87%E4%BB%B6.md/)
+* [写入历史K线到csv文件](https://github.com/abramwang/QuantPlusApi_Python/blob/master/doc/demo/%E5%86%99%E5%85%A5%E5%8E%86%E5%8F%B2K%E7%BA%BF%E5%88%B0csv%E6%96%87%E4%BB%B6.md)
+* [增加_修改_删除订阅代码](https://github.com/abramwang/QuantPlusApi_Python/blob/master/doc/demo/%E5%A2%9E%E5%8A%A0_%E4%BF%AE%E6%94%B9_%E5%88%A0%E9%99%A4%E8%AE%A2%E9%98%85%E4%BB%A3%E7%A0%81.md)
