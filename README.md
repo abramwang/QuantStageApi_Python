@@ -13,8 +13,8 @@ QuantPlus_Api_Python 是 QuantPlus_Api 接口的 Python 实现
 **Window版本**
 
 * [python27](https://github.com/abramwang/QuantPlusApi_Python/blob/master/download/win_python27_x64.rar "python27")
-* [python35](https://github.com/abramwang/QuantPlusApi_Python/blob/master/download/linux_python35_x64.rar "python35")
-* [python36](https://github.com/abramwang/QuantPlusApi_Python/blob/master/download/linux_python36_x64.rar "python36")
+* [python35](https://github.com/abramwang/QuantPlusApi_Python/blob/master/download/win_python35_x64.rar "python35")
+* [python36](https://github.com/abramwang/QuantPlusApi_Python/blob/master/download/win_python36_x64.rar "python36")
 
  **Linux版本**
 
