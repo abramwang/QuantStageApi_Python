@@ -1,8 +1,11 @@
-# QuantPlus_Api_Python
+![img](http://www.quantplus.com.cn/static/img/logo_2.png)
+
+#QuantPlus_Api_Python
+[项目主页](http://www.quantplus.com.cn/"项目主页") 
 
 QuantPlus_Api_Python 是QuantPlus团队根据多年国内二级市场上的量化交易经验，将底层量化接口开放出来的一个产品。旨在为国内二级市场的**量化开发者**在数据、算法、交易等方面提供全面支持。目前已开放上证、深圳、中金所三个市场的level2深度行情数据、常用技术分析指标库、普通股票交易、融资融券交易的接口，不久后将开放个股期权交易接口的使用。
 
-QuantPlus_Api 不仅仅是一个高速行情和整合了多加券商柜台的交易接口，还是 [QuantPlus](http://www.quantplus.com.cn/"QuantPlus") 这个量化平台的入口。通过它量化开发者可以方便的构建自己的自动交易策略、信号提醒工具、甚至自己构建一个类似同花顺、大智慧的行情交易软件。
+QuantPlus_Api 不仅仅是一个高速行情和整合了多家券商柜台的交易接口，还是 [QuantPlus](http://www.quantplus.com.cn/"QuantPlus") 匡益量化平台的入口。通过它量化开发者可以方便的构建自己的自动交易策略、信号提醒工具、甚至自己构建一个类似同花顺、大智慧的行情交易软件。
 
 QuantPlus_Api_Python 是 QuantPlus_Api 接口的 Python 实现
 
