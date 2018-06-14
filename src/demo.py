@@ -59,7 +59,7 @@ class MyCallBack(QuantPlus_Api.QP_CallBack):
     def OnRspCode(self, codes, optionCodes):
         pass
     def OnRtnDataMarket(self, data):
-        #print(data)
+        print("OnRtnDataMarket", data)
         pass
     def OnRtnDataFuture(self, data):
         #print(data)
@@ -79,7 +79,7 @@ class MyCallBack(QuantPlus_Api.QP_CallBack):
         #print(data)
         pass
     def OnRtnDataKLine(self, data):
-        #print(data)
+        print(data)
         pass
     def OnRtnDayBegin(self, data):
         pass
@@ -97,33 +97,20 @@ class MyCallBack(QuantPlus_Api.QP_CallBack):
     def OnRspHaltingDay(self, data):
         pass
     def OnRspSubQuote(self, data):
-        print(data)
+        print("OnRspSubQuote", data)
         pass
 
-    
-def main():
-    cb = MyCallBack()
-    session = QuantPlus_Api.CreatSession(cb, QuantPlus_Api.QP_ModelType.test)
-
-    session.Login("test1", "abcd1234")
-    #session.GetCode()
-    """
+def testReqMarketData(session):
     session.ReqSubQuote({
         "nReqId"        : 1,
-        "nSubType"      : QuantPlus_Api.QP_SubType.order_queue,
+        "nSubType"      : QuantPlus_Api.QP_SubType.market | QuantPlus_Api.QP_SubType.kline,
         "nCycType"      : QuantPlus_Api.QP_CycType.none,
-        "szBeginTime"   : "2017-06-13 00:00:00",
-        "szEndTime"     : "2017-06-13 23:59:00",
-        "mSubCodes"     : ["000001.SZ"],
-#        "mSubCodes"     : ["000002.SZ", "000333.SZ", "000651.SZ", "000895.SZ", "000963.SZ",
-#                            "001979.SZ", "002078.SZ", "002146.SZ", "002304.SZ", "002311.SZ",
-#                            "002415.SZ", "600048.SH", "600104.SH", "600153.SH", "600276.SH",
-#                            "600340.SH", "600383.SH", "600519.SH", "600566.SH", "600585.SH",
-#                            "600690.SH", "600741.SH", "600900.SH", "601012.SH", "601225.SH",
-#                            "601288.SH", "601318.SH", "601398.SH", "601668.SH", "601888.SH"],
+        "szBeginTime"   : "2017-10-09 00:00:00",
+        "szEndTime"     : "2017-10-09 23:59:00",
+        "mSubCodes"     : ["000001.SZ", "000333.SZ"],
     })
-    """
-	"""
+
+def testReqOrderQry(session):
     session.ReqOrderQry({
         "nReqId"            : 4,
         "nUserInt"          : 0,
@@ -133,8 +120,8 @@ def main():
         "nIndex"            : 0,
         "nNum"              : 0,
     })
-	"""
-    """
+
+def testReqMatchQry(session):
     session.ReqMatchQry({
         "nReqId"            : 4,
         "nUserInt"          : 0,
@@ -144,8 +131,8 @@ def main():
         "nIndex"            : 0,
         "nNum"              : 0,
     })
-    """
-    """
+
+def testReqPositionQry(session):
     session.ReqPositionQry({
         "nReqId"            : 4,
         "nUserInt"          : 0,
@@ -153,8 +140,8 @@ def main():
         "szUseStr"          : "",
         "szContractCode"    : "",
     })
-    """
-    """
+
+def testReqMaxEntrustCount(session):
     session.ReqMaxEntrustCount({
         "nReqId"            : 4,
         "nUserInt"          : 0,
@@ -162,8 +149,8 @@ def main():
         "szUseStr"          : "",
         "szContractCode"    : "",
     })
-    """
-    """
+
+def testReqQryAccountMaxEntrustCount(session):
     session.ReqQryAccountMaxEntrustCount({
         "nReqId"            : 4,
         "nUserInt"          : 0,
@@ -172,9 +159,8 @@ def main():
         "szContractCode"    : "",
         "nAccountId"        : 0,
     })
-    """
-    session.ReqSubscribeMaxEntrustCount()
-    """
+
+def testReqOrderInsert(session):
     session.ReqOrderInsert({
         "nReqId"            : 1,
         "nStrategyId"       : 1,
@@ -188,7 +174,21 @@ def main():
         "nOrderVol"         : 100,
         "mOrderDetails"     :[],
     })
-    """
+    
+def main():
+    cb = MyCallBack()
+    session = QuantPlus_Api.CreatSession(cb, QuantPlus_Api.QP_ModelType.test)
+
+    session.Login("abramwang", "abcd1234")
+    #session.GetCode()
+    testReqMarketData(session);
+    #testReqOrderQry(session);
+    #testReqMatchQry(session);
+    #testReqPositionQry(session);
+    #testReqMaxEntrustCount(session);
+    #testReqQryAccountMaxEntrustCount(session);
+    #testReqOrderInsert(session);
+    #session.ReqSubscribeMaxEntrustCount()
     while 1:
         pass
 
