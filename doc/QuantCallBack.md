@@ -476,8 +476,8 @@ pRsp字段说明
 | nOrderVol          | int    | 委托数量                                                     |
 | pOrderDetail       | list   | 实际资金账号订单明细                                         |
 | nCloseR            | int    | 0正常平仓,1为风控干预平仓,2为服务器风控策略达到强平位平仓    |
-| nOrderOwnerId      | int    | 订单所属用户Id                                               |
-| nOrderId           | string | 订单流水号，服务器唯一                                       |
+| nOrderOwnerId      | long   | 订单所属用户Id                                               |
+| nOrderId           | long   | 订单流水号，服务器唯一                                       |
 | nSubmitVol         | int    | 已报量（报单到券商柜台的量）                                 |
 | nDealedPrice       | double | 成交均价（*10000）                                           |
 | nDealedVol         | int    | 成交数量                                                     |
@@ -492,7 +492,7 @@ pOrderDetail字段说明
 | 参数              | 类型   | 说明                                                         |
 | ----------------- | ------ | ------------------------------------------------------------ |
 | szOrderStreamId   | string | 券商订单流水号                                               |
-| nAccountId        | string | 资金账号id                                                   |
+| nAccountId        | long   | 资金账号id                                                   |
 | szAccountNickName | string | 资金账号别名                                                 |
 | nOrderVol         | int    | 委托量                                                       |
 | nDealedPrice      | double | 成交均价（*10000）                                           |
@@ -552,8 +552,8 @@ pRsp字段说明
 | nOrderVol          | int    | 委托数量                                                     |
 | pOrderDetail       | list   | 实际资金账号订单明细                                         |
 | nCloseR            | int    | 0正常平仓,1为风控干预平仓,2为服务器风控策略达到强平位平仓    |
-| nOrderOwnerId      | int    | 订单所属用户Id                                               |
-| nOrderId           | string | 订单流水号，服务器唯一                                       |
+| nOrderOwnerId      | long   | 订单所属用户Id                                               |
+| nOrderId           | long   | 订单流水号，服务器唯一                                       |
 | nSubmitVol         | int    | 已报量（报单到券商柜台的量）                                 |
 | nDealedPrice       | double | 成交均价（*10000）                                           |
 | nDealedVol         | int    | 成交数量                                                     |
@@ -569,7 +569,7 @@ pOrderDetail字段说明
 | 参数              | 类型   | 说明                                                         |
 | ----------------- | ------ | ------------------------------------------------------------ |
 | szOrderStreamId   | string | 券商订单流水号                                               |
-| nAccountId        | string | 资金账号id                                                   |
+| nAccountId        | long   | 资金账号id                                                   |
 | szAccountNickName | string | 资金账号别名                                                 |
 | nOrderVol         | int    | 委托量                                                       |
 | nDealedPrice      | double | 成交均价（*10000）                                           |
@@ -601,7 +601,7 @@ pRsp字段说明
 | nUserInt        | int    | 用户保留字段                                                 |
 | nUserDouble     | double | 用户保留字段                                                 |
 | szUseStr        | string | 用户保留字段                                                 |
-| nOrderId        | int    | 订单流水号，服务器唯一                                       |
+| nOrderId        | long   | 订单流水号，服务器唯一                                       |
 | szOrderStreamId | string | 券商订单流水号                                               |
 | nMatchStreamId  | string | 券商成交流水号                                               |
 | nMatchPrice     | double | 成交价格（*10000）                                           |
@@ -683,7 +683,7 @@ pRsp字段说明
 | nUserInt              | int    | 用户保留字段     |
 | nUserDouble           | double | 用户保留字段     |
 | szUseStr              | string | 用户保留字段     |
-| nAccountId            | string | 资金账号id       |
+| nAccountId            | long   | 资金账号id       |
 | szAccountNickName     | string | 资金账号别名     |
 | pStockMaxEntrustCount | list   | 股票可交易量     |
 | bStatus               | bool   | 资金账号是否可用 |
@@ -725,8 +725,8 @@ pNotice字段说明
 | nOrderVol          | int    | 委托数量                                                     |
 | pOrderDetail       | list   | 实际资金账号订单明细                                         |
 | nCloseR            | int    | 0正常平仓,1为风控干预平仓,2为服务器风控策略达到强平位平仓    |
-| nOrderOwnerId      | int    | 订单所属用户Id                                               |
-| nOrderId           | string | 订单流水号，服务器唯一                                       |
+| nOrderOwnerId      | long   | 订单所属用户Id                                               |
+| nOrderId           | long   | 订单流水号，服务器唯一                                       |
 | nSubmitVol         | int    | 已报量（报单到券商柜台的量）                                 |
 | nDealedPrice       | double | 成交均价（*10000）                                           |
 | nDealedVol         | int    | 成交数量                                                     |
@@ -741,7 +741,7 @@ pOrderDetail字段说明
 | 参数              | 类型   | 说明                                                         |
 | ----------------- | ------ | ------------------------------------------------------------ |
 | szOrderStreamId   | string | 券商订单流水号                                               |
-| nAccountId        | string | 资金账号id                                                   |
+| nAccountId        | long   | 资金账号id                                                   |
 | szAccountNickName | string | 资金账号别名                                                 |
 | nOrderVol         | int    | 委托量                                                       |
 | nDealedPrice      | double | 成交均价（*10000）                                           |
@@ -841,7 +841,7 @@ pData字段说明
 
 | 参数             | 类型   | 说明           |
 | ---------------- | ------ | -------------- |
-| nSimAccountId    | string | 模拟资金账号id |
+| nSimAccountId    | long   | 模拟资金账号id |
 | szNickName       | string | 资金账号别名   |
 | szText           | string | 备注           |
 | nTotalAmount     | int    | 资金总量       |
