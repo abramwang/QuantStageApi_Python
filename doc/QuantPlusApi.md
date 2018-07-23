@@ -86,7 +86,7 @@
 例：
 
 ```python
-
+>>>api.ReqHaltingDay(1, ["600030.SH"], "2016-07-17", "2017-11-06")
 ```
 
 回调接口为OnRspHaltingDay
@@ -101,11 +101,38 @@
 | 字段名       | 参数类型 | 说明                                                         |
 | ------------ | -------- | ------------------------------------------------------------ |
 | nReqID       | int      | 用户输入reqid                                                |
+| SubType      | slist    | 支持类型有，支持多种数据类型同时订阅                         |
+| CycType      | list     | 订阅周期类型，支持多种周期类型同时订阅（只有当数据类型中有kline时，周期类型才生效） |
 | pSubWindCode | list     | 请求的代码表                                                 |
 | szBeginTime  | string   | 起始日期                                                     |
 | szEndTime    | string   | 结束日期                                                     |
 | nErrNo       | int      | 错误码，参考[数据字典](https://github.com/abramwang/QuantPlusApi_Python)6 |
 | szErrMsg     | string   | 错误说明                                                     |
+
+SubType说明
+
+| 值          | 参数类型 | 说明     |
+| ----------- | -------- | -------- |
+| market      | string   | 个股行情 |
+| index       | string   | 指数     |
+| transatcion | string   | 逐笔成交 |
+| order       | string   | 逐笔委托 |
+| order_queue | string   | 委托队列 |
+| future      | string   | 期货     |
+| option      | string   | 期权     |
+| kline       | string   | kline    |
+
+CycType说明
+
+| 值        | 参数类型 | 说明     |
+| --------- | -------- | -------- |
+| second_10 | string   | 10秒级   |
+| minute    | string   | 分钟级   |
+| minute_5  | string   | 5分钟级  |
+| minute_15 | string   | 15分钟级 |
+| minute_30 | string   | 30分钟级 |
+| hour      | string   | 小时级   |
+| day       | string   | 日级     |
 
 例：
 
