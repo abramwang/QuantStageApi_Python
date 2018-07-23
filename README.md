@@ -1,5 +1,4 @@
 ![img](http://www.quantplus.com.cn/static/img/logo_2.png)
-
 #QuantPlus_Api_Python
 
 
@@ -27,23 +26,6 @@ QuantPlus_Api_Python 是 QuantPlus_Api 接口的 Python 实现
 * [python27](https://raw.githubusercontent.com/abramwang/QuantPlusApi_Python/master/download/python2.7-windows.zip)
 * [python35](https://raw.githubusercontent.com/abramwang/QuantPlusApi_Python/master/download/python3.5-windows.zip)
 * [python36](https://raw.githubusercontent.com/abramwang/QuantPlusApi_Python/master/download/python3.6-windows.zip)
-
- **Linux版本**
-
-暂无
-
-
-下载完成后解压至任意目录下。其中，windows版本的目录结构如下
-
-```
-├─QuantBaseApi
-│	├─__init__.py
-│	├─QuantPlusApi.pyd
-│	└─*.dll
-└─demo.py
-```
-
-其中目录QuantPlus_BaseApi 是核心库，可以将其copy到python环境下的site-package目录下，或者所有用户代码保持与QuantPlus_BaseApi 在同级目录下即可。
 
 ## 快速开始
 
