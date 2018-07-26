@@ -43,7 +43,8 @@ class QuantCallBack(PT_QuantApi_Python36.PT_QuantSpi):
 		pass
 	def OnRspTradingDay(self,pData):
 		pass
-    
+	def OnRtnTimeless(self,nReqId):
+		pass
 #交易回调
 	def OnRspOrderInsert(self, pRsp, nErr):
 		pass
@@ -269,17 +270,18 @@ pKline字段说明如下
 | ---------- | -------- | ------------------------------------------------------------ |
 | szType     | string   | kLine                                                        |
 | nReqID     | int      | 用户请求reqid                                                |
-| szWindCode | string   | 原始Code 600001.SH                                           |
+| szWindCode | string   | Code 600001.SH                                               |
+| szCode     | string   | 原始code                                                     |
 | szDatetime | string   | 时间 ( YYYY-MM-DD hh:mm:SS.mmm)                              |
-| nOpen      | string   | 开盘价=实际价格(单位: 元/股)                                 |
-| nHigh      | string   | 最高价=实际价格(单位: 元/股)                                 |
-| nLow       | string   | 最低价=实际价格(单位: 元/股)                                 |
-| nClose     | string   | 今收价=实际价格(单位: 元/股)                                 |
-| nPreClose  | string   | 昨收价=实际价格(单位: 元/股)                                 |
-| nHighLimit | string   | 涨停价=实际价格(单位: 元/股)                                 |
-| nLowLimit  | string   | 跌停价=实际价格(单位: 元/股)                                 |
-| nVolume    | string   | 成交数量=实际股数(单位: 股)                                  |
-| nTurover   | string   | 成交金额=实际金额(单位: 元)                                  |
+| nOpen      | double   | 开盘价=实际价格(单位: 元/股)                                 |
+| nHigh      | double   | 最高价=实际价格(单位: 元/股)                                 |
+| nLow       | double   | 最低价=实际价格(单位: 元/股)                                 |
+| nClose     | double   | 今收价dong实际价格(单位: 元/股)                              |
+| nPreClose  | double   | 昨收价=实际价格(单位: 元/股)                                 |
+| nHighLimit | double   | 涨停价=实际价格(单位: 元/股)                                 |
+| nLowLimit  | double   | 跌停价=实际价格(单位: 元/股)                                 |
+| nVolume    | int      | 成交数量=实际股数(单位: 股)                                  |
+| nTurover   | int      | 成交金额=实际金额(单位: 元)                                  |
 | szCycType  | int      | 周期类型，支持多种类型同时订阅，传多个类型的或运算结果值即可，参考[数据字典](https://github.com/abramwang/QuantPlusApi_Python/blob/master/doc/%E6%95%B0%E6%8D%AE%E5%AD%97%E5%85%B8.md)3 |
 
 ### 8 通知逐笔成交
@@ -299,11 +301,12 @@ def OnRtnTransaction(self, pTransaction):
 | ---------- | -------- | ------------------------------- |
 | szType     | string   | transaction                     |
 | nReqID     | int      | 用户输入reqid                   |
-| szWindCode | string   | 原始Code 600001.SH              |
+| szWindCode | string   | Code 600001.SH                  |
+| szWindCode | string   | 原始code                        |
 | szDatetime | string   | 时间 ( YYYY-MM-DD hh:mm:SS.mmm) |
 | nPrice     | double   | 成交价                          |
-| nVolume    | double   | 成交量                          |
-| nTurnover  | double   | 成交金额                        |
+| nVolume    | int      | 成交量                          |
+| nTurnover  | int      | 成交金额                        |
 | nBSFlag    | int      | 买卖方向 42（买） 53（卖）      |
 
 ### 9 通知委托队列
@@ -315,16 +318,17 @@ def OnRtnOrderQueue(self, pOrderQueue):
 
 pOrderQueue字段说明如下
 
-| 字段名        | 参数类型    | 说明                            |
-| ------------- | ----------- | ------------------------------- |
-| szType        | string      | orderQueue                      |
-| nReqID        | int         | 用户输入reqid                   |
-| szWindCode    | string      | 原始Code 600001.SH              |
-| szDatetime    | string      | 时间 ( YYYY-MM-DD hh:mm:SS.mmm) |
-| nPrice        | double      | 委托价                          |
-| szSide        | string      | 方向（"A" Ask, "B" Bid）        |
-| nOrders       | double      | 委托数量                        |
-| nABVolumeList | double list | 委托申报量明细                  |
+| 字段名        | 参数类型 | 说明                            |
+| ------------- | -------- | ------------------------------- |
+| szType        | string   | orderQueue                      |
+| nReqID        | int      | 用户输入reqid                   |
+| szWindCode    | string   | Code 600001.SH                  |
+| szCode        | string   | 原始Code                        |
+| szDatetime    | string   | 时间 ( YYYY-MM-DD hh:mm:SS.mmm) |
+| nPrice        | double   | 委托价                          |
+| szSide        | string   | 方向（"A" Ask, "B" Bid）        |
+| nOrders       | int      | 委托数量                        |
+| nABVolumeList | int list | 委托申报量明细                  |
 
 ### 10 通知逐笔委托
 
@@ -339,7 +343,8 @@ pOrder字段说明如下
 | -------------- | -------- | ------------------------------- |
 | szType         | string   | order                           |
 | nReqID         | int      | 用户输入reqid                   |
-| szWindCode     | string   | 原始Code 600001.SH              |
+| szWindCode     | string   | Code 600001.SH                  |
+| szCode         | string   | 原始Code                        |
 | szDatetime     | string   | 时间 ( YYYY-MM-DD hh:mm:SS.mmm) |
 | nPrice         | double   | 委托价                          |
 | nVolume        | int      | 委托量                          |
@@ -365,7 +370,8 @@ def OnRtnMarket(self, pMarket):
 | ------------ | ----------- | ---- | ------------------------------- |
 | szType       | string      |      | stock                           |
 | nReqID       | int         |      | 请求时用户传入的reqid           |
-| szWindCode   | string      |      | 原始Code 600001.SH              |
+| szWindCode   | string      |      | Code 600001.SH                  |
+| szCode       | string      |      | 原始Code                        |
 | szDatetime   | string      |      | 时间 ( YYYY-MM-DD hh:mm:SS.mmm) |
 | nPreClose    | double      |      | 昨日收盘价                      |
 | nOpen        | double      |      | 开盘价                          |
@@ -387,7 +393,8 @@ def OnRtnMarket(self, pMarket):
 | ------------ | ----------- | ---- | ------------------------------- |
 | szType       | string      |      | future/option                   |
 | nReqID       | int         |      | 请求时用户传入的reqid           |
-| szWindCode   | string      |      | 原始Code 600001.SH              |
+| szWindCode   | string      |      | Code 600001.SH                  |
+| szCode       | string      |      | 原始Code                        |
 | szDatetime   | string      |      | 时间 ( YYYY-MM-DD hh:mm:SS.mmm) |
 | nPreClose    | double      |      | 昨日收盘价                      |
 | nOpen        | double      |      | 开盘价                          |
@@ -409,7 +416,8 @@ def OnRtnMarket(self, pMarket):
 | ---------- | -------- | ---- | ------------------------------- |
 | szType     | string   |      | index                           |
 | nReqID     | int      |      | 请求时用户传入的reqid           |
-| szWindCode | string   |      | 原始Code 600001.SH              |
+| szWindCode | string   |      | Code 600001.SH                  |
+| szCode     | string   |      | 原始Code                        |
 | szDatetime | string   |      | 时间 ( YYYY-MM-DD hh:mm:SS.mmm) |
 | nPreClose  | double   |      | 昨日收盘价                      |
 | nOpen      | double   |      | 开盘价                          |
