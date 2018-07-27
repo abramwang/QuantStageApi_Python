@@ -6,9 +6,9 @@
 
 | 项目名称 | QuantPlus量化系统平台       | 研发单位 | 上海云察信息科技有限公司 |
 | -------- | --------------------------- | -------- | ------------------------ |
-| 文档名称 | QuantBaseApi python开发手册 | 项目版本 | beta5.1.3                |
+| 文档名称 | QuantBaseApi python开发手册 | 项目版本 | beta5.1.4                |
 | 文档状态 | 编辑中                      | 发布日期 | 2018.07.20               |
-| 文档编辑 | 杨军辉、王龙                | 文档版本 | 0.1                      |
+| 文档编辑 | 杨军辉、王龙                | 文档版本 | 1.0                      |
 
 [项目主页](www.quantplus.com.cn) 
 
@@ -27,6 +27,54 @@ QuantPlus_Api_Python 是 QuantPlus_Api 接口的 Python 实现
 * [python27](https://raw.githubusercontent.com/abramwang/QuantPlusApi_Python/master/download/python2.7-windows.zip)
 * [python35](https://raw.githubusercontent.com/abramwang/QuantPlusApi_Python/master/download/python3.5-windows.zip)
 * [python36](https://raw.githubusercontent.com/abramwang/QuantPlusApi_Python/master/download/python3.6-windows.zip)
+
+**linux版本**
+
+* [python27](https://raw.githubusercontent.com/abramwang/QuantPlusApi_Python/master/download/python2.7-linux.tar.gz)
+* [python35](https://raw.githubusercontent.com/abramwang/QuantPlusApi_Python/master/download/python3.5-linux.tar.gz)
+* [python36](https://raw.githubusercontent.com/abramwang/QuantPlusApi_Python/master/download/python3.6-linux.tar.gz)
+
+下载完成后解压至任意目录下。其中，windows版本的目录结构如下
+
+```
+├─QuantBaseApi
+	├─__init__.py
+	├─boost_python-vc120-mt-1_64.dll
+	├─msvcp120.dll
+	├─msvcp120d.dll
+	├─msvcr120.dll
+	├─msvcr120d.dll
+	├─PT_MarketDataApi.dll
+	├─PT_QuantApi.dll
+	├─PT_QuantApi_Python27.pyd
+	└─PT_TradeDataApi.dll
+└─demo.py
+```
+
+linux 版本目录结构如下
+
+```
+├─QuantBaseApi
+	├─__init__.py
+	├─libboost_chrono.so.1.64.0
+	├─libboost_context.so.1.64.0
+	├─libboost_coroutine.so.1.64.0
+	├─libboost_date_time.so.1.64.0
+	├─libboost_filesystem.so.1.64.0
+	├─libboost_python.so.1.64.0
+	├─libboost_system.so.1.64.0
+	├─libboost_thread.so.1.64.0
+	├─libprotobuf.so.13
+	├─libPT_MarketDataApi.so
+	├─libPT_QuantApi.so
+	├─libPT_TradeDataApi.so
+	├─libPTNetwork.so
+	├─libsnappy.so.1
+	└─PT_QuantApi_Python27.so
+└─demo.py
+```
+
+将QuantBaseApi目录下所有so文件拷贝到系统默认路径下，或者自行添加环境变量即可
 
 ## 快速开始
 
