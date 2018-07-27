@@ -147,3 +147,9 @@ if __name__ == '__main__':
 ## 示例
 以下提供了几个具体业务场景下的代码使用示例
 * [插入订单](https://github.com/abramwang/QuantPlusApi_Python/blob/master/doc/demo/%E6%8F%92%E5%85%A5%E8%AE%A2%E5%8D%95.md)
+* [写入历史K线到csv文件](https://github.com/abramwang/QuantPlusApi_Python/blob/master/doc/demo/%E5%86%99%E5%85%A5%E5%8E%86%E5%8F%B2K%E7%BA%BF%E5%88%B0csv%E6%96%87%E4%BB%B6.md)
+* [查询订单](https://github.com/abramwang/QuantPlusApi_Python/blob/master/doc/demo/%E6%9F%A5%E8%AF%A2%E8%AE%A2%E5%8D%95.md)
+* [获取详细日K线并生成csv文件](https://github.com/abramwang/QuantPlusApi_Python/blob/master/doc/demo/%E8%8E%B7%E5%8F%96%E8%AF%A6%E7%BB%86%E6%97%A5K%E7%BA%BF%E5%B9%B6%E7%94%9F%E6%88%90csv%E6%96%87%E4%BB%B6.md)
+* [订阅实时k线](https://github.com/abramwang/QuantPlusApi_Python/blob/master/doc/demo/%E8%AE%A2%E9%98%85%E5%AE%9E%E6%97%B6K%E7%BA%BF.md)
+* [订阅实时tick](https://github.com/abramwang/QuantPlusApi_Python/blob/master/doc/demo/%E8%AE%A2%E9%98%85%E5%AE%9E%E6%97%B6tick.md)
+* [连续请求某只股票tick数据并生成csv文件](https://github.com/abramwang/QuantPlusApi_Python/blob/master/doc/demo/%E8%BF%9E%E7%BB%AD%E8%AF%B7%E6%B1%82%E6%9F%90%E5%8F%AA%E8%82%A1%E7%A5%A8tick%E6%95%B0%E6%8D%AE%E5%B9%B6%E7%94%9F%E6%88%90csv%E6%96%87%E4%BB%B6.md)
