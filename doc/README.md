@@ -38,24 +38,32 @@
 
 - 登陆 
 
-  ![](https://raw.githubusercontent.com/abramwang/QuantPlusApi_Cpp/master/doc/png/%E7%99%BB%E9%99%86%E6%B5%81%E7%A8%8B.png)
+  ![](https://raw.githubusercontent.com/abramwang/QuantPlusApi_Python/master/doc/png/%E7%99%BB%E9%99%86%E6%B5%81%E7%A8%8B.png)
 
 - 下单
 
-  ![](https://raw.githubusercontent.com/abramwang/QuantPlusApi_Cpp/master/doc/png/%E4%B8%8B%E5%8D%95%E6%B5%81%E7%A8%8B.png)
+  ![](https://raw.githubusercontent.com/abramwang/QuantPlusApi_Python/master/doc/png/%E4%B8%8B%E5%8D%95%E6%B5%81%E7%A8%8B.png)
+
+  **交易业务请求在onconnect回调之后发起**
 
 - 撤单 
 
-  ![](https://raw.githubusercontent.com/abramwang/QuantPlusApi_Cpp/master/doc/png/%E6%92%A4%E5%8D%95%E6%B5%81%E7%A8%8B.png)
+  ![](https://raw.githubusercontent.com/abramwang/QuantPlusApi_Python/master/doc/png/%E6%92%A4%E5%8D%95%E6%B5%81%E7%A8%8B.png)
+
+  **交易业务请求在onconnect回调之后发起**
 
 - 订阅行情 
 
-  ![](https://raw.githubusercontent.com/abramwang/QuantPlusApi_Cpp/master/doc/png/%E8%AE%A2%E9%98%85%E8%A1%8C%E6%83%85%E6%B5%81%E7%A8%8B.png)
+  ![](https://raw.githubusercontent.com/abramwang/QuantPlusApi_Python/master/doc/png/%E8%AE%A2%E9%98%85%E8%A1%8C%E6%83%85%E6%B5%81%E7%A8%8B.png)
+
+  **行情业务请求在onconnect回调之后发起**
 
 - 查询委托
 
-  ![](https://raw.githubusercontent.com/abramwang/QuantPlusApi_Cpp/master/doc/png/%E6%9F%A5%E8%AF%A2%E6%B5%81%E7%A8%8B.png)
+  ![](https://raw.githubusercontent.com/abramwang/QuantPlusApi_Python/master/doc/png/%E6%9F%A5%E8%AF%A2%E6%B5%81%E7%A8%8B.png)
+
+  **交易业务请求在onconnect回调之后发起**
 
 - 模拟引擎 
 
-  ![](https://raw.githubusercontent.com/abramwang/QuantPlusApi_Cpp/cf64ceea6fcf2a3fa64f2736553692c6196d8752/doc/png/%E6%A8%A1%E6%8B%9F%E5%BC%95%E6%93%8E%E4%BD%BF%E7%94%A8%E6%B5%81%E7%A8%8B.png)
+  ![](https://raw.githubusercontent.com/abramwang/QuantPlusApi_Python/master/doc/png/%E6%92%AE%E5%90%88%E5%BC%95%E6%93%8E%E4%BD%BF%E7%94%A8%E6%B5%81%E7%A8%8B.png)
