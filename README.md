@@ -61,6 +61,7 @@ linux 版本目录结构如下
 	├─libboost_coroutine.so.1.64.0
 	├─libboost_date_time.so.1.64.0
 	├─libboost_filesystem.so.1.64.0
+	├─libboost_locale.so.1.64.0
 	├─libboost_python.so.1.64.0
 	├─libboost_system.so.1.64.0
 	├─libboost_thread.so.1.64.0
