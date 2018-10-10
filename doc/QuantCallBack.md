@@ -685,25 +685,27 @@ def OnRspQryAccountMaxEntrustCount(self,pRsp, nErr, isEnd):
 
 pRsp字段说明
 
-| 参数                  | 类型   | 说明             |
-| --------------------- | ------ | ---------------- |
-| nReqID                | int    | 用户reqid        |
-| nUserInt              | int    | 用户保留字段     |
-| nUserDouble           | double | 用户保留字段     |
-| szUseStr              | string | 用户保留字段     |
-| nAccountId            | long   | 资金账号id       |
-| szAccountNickName     | string | 资金账号别名     |
-| pStockMaxEntrustCount | list   | 股票可交易量     |
-| bStatus               | bool   | 资金账号是否可用 |
-| nAvailableCaptial     | int    | 可用资金         |
+| 参数                  | 类型   | 说明                     |
+| --------------------- | ------ | ------------------------ |
+| nReqID                | int    | 用户reqid                |
+| nUserInt              | int    | 用户保留字段             |
+| nUserDouble           | double | 用户保留字段             |
+| szUseStr              | string | 用户保留字段             |
+| nAccountId            | long   | 资金账号id               |
+| szAccountNickName     | string | 资金账号别名             |
+| pStockMaxEntrustCount | list   | 股票可交易量             |
+| bStatus               | bool   | 资金账号是否可用         |
+| nAvailableCaptial     | int    | 可用资金                 |
+| nTotalCaptial         | int    | 资金账号层面当日初始资金 |
 
 pStockMaxEntrustCount字段说明
 
-| 参数           | 类型   | 说明                 |
-| -------------- | ------ | -------------------- |
-| szContractCode | string | 证券代码             |
-| nMaxBuyCaptial | int    | 最大可买量（初始值） |
-| nMaxSellVol    | int    | 最大可卖量（初始值） |
+| 参数               | 类型   | 说明                     |
+| ------------------ | ------ | ------------------------ |
+| szContractCode     | string | 证券代码                 |
+| nTotalPosition     | int    | 持仓总量                 |
+| nAvailablePosition | int    | 可卖量                   |
+| nLastPosition      | int    | 资金账号层面当日初始持仓 |
 
 ### 8 订单状态改变推送
 
@@ -862,3 +864,40 @@ pReservationCode字段说明
 | szWinCode      | string | 证券代码            |
 | nLendingAmount | int    | 持仓量              |
 | nPrice         | double | 持仓均价（* 10000） |
+
+
+
+### 13 查询资金账号初始值信息回调
+
+```python
+def OnRspQryAccountMaxEntrustCount(self,pRsp, nErr, isEnd):
+    pass
+```
+
+| 参数  | 类型 | 说明                                                         |
+| ----- | ---- | ------------------------------------------------------------ |
+| pRsp  | dict | 查询回调信息                                                 |
+| nErr  | int  | 错误码，参考[数据字典](https://github.com/abramwang/QuantPlusApi_Python)6 |
+| isEnd | bool | 是否是最后一条                                               |
+
+pRsp字段说明
+
+| 参数                  | 类型   | 说明             |
+| --------------------- | ------ | ---------------- |
+| nReqID                | int    | 用户reqid        |
+| nUserInt              | int    | 用户保留字段     |
+| nUserDouble           | double | 用户保留字段     |
+| szUseStr              | string | 用户保留字段     |
+| nAccountId            | long   | 资金账号id       |
+| szAccountNickName     | string | 资金账号别名     |
+| pStockMaxEntrustCount | list   | 股票可交易量     |
+| bStatus               | bool   | 资金账号是否可用 |
+| nAvailableCaptial     | int    | 可用资金         |
+
+pStockMaxEntrustCount字段说明
+
+| 参数           | 类型   | 说明                 |
+| -------------- | ------ | -------------------- |
+| szContractCode | string | 证券代码             |
+| nMaxBuyCaptial | int    | 最大可买量（初始值） |
+| nMaxSellVol    | int    | 最大可卖量（初始值） |

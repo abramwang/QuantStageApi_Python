@@ -274,7 +274,7 @@ pOrderDetail字段说明
 
 回调接口OnRspQryMaxEntrustCount
 
-### 7 查询资金账号层面最大可委托量
+### 7 查询资金账号当前信息
 
 ```python
 >>>req = {"nReqId":1,"nUserInt":1,"nUserDouble":1,"szUserStr":"","szContractCode":""}
@@ -303,3 +303,24 @@ pOrderDetail字段说明
 | 参数 | 类型 | 说明           |
 | ---- | ---- | -------------- |
 | req  | long | 模拟资金账号id |
+
+
+
+### 9 查询资金账号初始信息
+
+```python
+>>>req = {"nReqId":1,"nUserInt":1,"nUserDouble":1,"szUserStr":"","szContractCode":""}
+>>>ret = api.QryAccountInitMaxEntrustCount(req)
+>>>print("QryAccountInitMaxEntrustCount :", ret)#打印返回码
+```
+
+| 参数           | 类型   | 说明                       |
+| -------------- | ------ | -------------------------- |
+| nReqId         | int    | 用户reqid                  |
+| nUserInt       | int    | 用户保留字段               |
+| nUserDouble    | double | 用户保留字段               |
+| szUseStr       | string | 用户保留字段               |
+| szContractCode | string | 证券代码，空值默认查询所有 |
+| nAccountId     | int    | 资金账号id                 |
+
+回调接口OnRspQryAccountInitMaxEntrustCount
