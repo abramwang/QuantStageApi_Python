@@ -693,6 +693,7 @@ pRsp字段说明
 | szUseStr              | string | 用户保留字段             |
 | nAccountId            | long   | 资金账号id               |
 | szAccountNickName     | string | 资金账号别名             |
+| nNum                  | int    | 可用股票数               |
 | pStockMaxEntrustCount | list   | 股票可交易量             |
 | bStatus               | bool   | 资金账号是否可用         |
 | nAvailableCaptial     | int    | 可用资金                 |
@@ -870,7 +871,7 @@ pReservationCode字段说明
 ### 13 查询资金账号初始值信息回调
 
 ```python
-def OnRspQryAccountMaxEntrustCount(self,pRsp, nErr, isEnd):
+def OnRspQryAccountInitMaxEntrustCount(self,pRsp, nErr, isEnd):
     pass
 ```
 
@@ -890,6 +891,7 @@ pRsp字段说明
 | szUseStr              | string | 用户保留字段     |
 | nAccountId            | long   | 资金账号id       |
 | szAccountNickName     | string | 资金账号别名     |
+| nNum                  | int    | 可用股票数       |
 | pStockMaxEntrustCount | list   | 股票可交易量     |
 | bStatus               | bool   | 资金账号是否可用 |
 | nAvailableCaptial     | int    | 可用资金         |

@@ -5,15 +5,15 @@
 
 | 项目名称 | Quant量化系统平台       | 研发单位 |  |
 | -------- | --------------------------- | -------- | ------------------------ |
-| 文档名称 | QuantBaseApi python开发手册 | 项目版本 | beta5.1.4                |
-| 文档状态 | 编辑中                      | 发布日期 | 2018.07.20               |
+| 文档名称 | QuantBaseApi python开发手册 | 项目版本 | beta5.2.0             |
+| 文档状态 | 编辑中                      | 发布日期 | 2018.09.28              |
 | 文档编辑 | 杨军辉、王龙                | 文档版本 | 1.0                      |
 
-[项目主页](www.quantplus.com.cn) 
+[项目主页](https://www.quantstage.com/) 
 
 QuantPlus_Api_Python 是QuantPlus团队根据多年国内二级市场上的量化交易经验，将底层量化接口开放出来的一个产品。旨在为国内二级市场的**量化开发者**在数据、算法、交易等方面提供全面支持。目前已开放上证、深圳、中金所三个市场的level2深度行情数据、常用技术分析指标库、普通股票交易、融资融券交易的接口，不久后将开放个股期权交易接口的使用。
 
-QuantPlus_Api 不仅仅是一个高速行情和整合了多家券商柜台的交易接口，还是 [QuantPlus](www.quantplus.com.cn) 匡益量化平台的入口。通过它量化开发者可以方便的构建自己的自动交易策略、信号提醒工具、甚至自己构建一个类似同花顺、大智慧的行情交易软件。
+QuantPlus_Api 不仅仅是一个高速行情和整合了多家券商柜台的交易接口，还是 [QuantPlus](https://www.quantstage.com/) 匡益量化平台的入口。通过它量化开发者可以方便的构建自己的自动交易策略、信号提醒工具、甚至自己构建一个类似同花顺、大智慧的行情交易软件。
 
 QuantPlus_Api_Python 是 QuantPlus_Api 接口的 Python 实现
 
@@ -23,15 +23,15 @@ QuantPlus_Api_Python 是 QuantPlus_Api 接口的 Python 实现
 
 **Window版本**
 
-* [python27](https://raw.githubusercontent.com/abramwang/QuantPlusApi_Python/master/download/python2.7-windows.zip)
-* [python35](https://raw.githubusercontent.com/abramwang/QuantPlusApi_Python/master/download/python3.5-windows.zip)
-* [python36](https://raw.githubusercontent.com/abramwang/QuantPlusApi_Python/master/download/python3.6-windows.zip)
+* [python27](https://github.com/abramwang/QuantStageApi_Python/blob/master/download/python2.7-x64-Release.zip)
+* [python35](https://github.com/abramwang/QuantStageApi_Python/blob/master/download/python3.5-x64-Release.zip)
+* [python36](https://github.com/abramwang/QuantStageApi_Python/blob/master/download/python3.6-x64-Release.zip)
 
 **linux版本**
 
-* [python27](https://raw.githubusercontent.com/abramwang/QuantPlusApi_Python/master/download/python2.7-linux.tar.gz)
-* [python35](https://raw.githubusercontent.com/abramwang/QuantPlusApi_Python/master/download/python3.5-linux.tar.gz)
-* [python36](https://raw.githubusercontent.com/abramwang/QuantPlusApi_Python/master/download/python3.6-linux.tar.gz)
+* [python27](https://github.com/abramwang/QuantStageApi_Python/blob/master/download/python2.7-linux.tar.gz)
+* [python35](https://github.com/abramwang/QuantStageApi_Python/blob/master/download/python3.5-linux.tar.gz)
+* [python36](https://github.com/abramwang/QuantStageApi_Python/blob/master/download/python3.6-linux.tar.gz)
 
 下载完成后解压至任意目录下。其中，windows版本的目录结构如下
 
