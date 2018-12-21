@@ -5,8 +5,8 @@
 
 | 项目名称 | Quant量化系统平台       | 研发单位 |  |
 | -------- | --------------------------- | -------- | ------------------------ |
-| 文档名称 | QuantBaseApi python开发手册 | 项目版本 | beta5.2.0             |
-| 文档状态 | 编辑中                      | 发布日期 | 2018.09.28              |
+| 文档名称 | QuantBaseApi python开发手册 | 项目版本 | beta5.2.1            |
+| 文档状态 | 编辑中                      | 发布日期 | 2018.12.21           |
 | 文档编辑 | 杨军辉、王龙                | 文档版本 | 1.0                      |
 
 [项目主页](https://www.quantstage.com/) 
@@ -29,9 +29,9 @@ QuantPlus_Api_Python 是 QuantPlus_Api 接口的 Python 实现
 
 **linux版本**
 
-* [python27](https://github.com/abramwang/QuantStageApi_Python/blob/master/download/python2.7-linux.tar.gz)
-* [python35](https://github.com/abramwang/QuantStageApi_Python/blob/master/download/python3.5-linux.tar.gz)
-* [python36](https://github.com/abramwang/QuantStageApi_Python/blob/master/download/python3.6-linux.tar.gz)
+* [python27](https://github.com/abramwang/QuantStageApi_Python/blob/master/download/python2.7-linux.zip)
+* [python35](https://github.com/abramwang/QuantStageApi_Python/blob/master/download/python3.5-linux.zip)
+* [python36](https://github.com/abramwang/QuantStageApi_Python/blob/master/download/python3.6-linux.zip)
 
 下载完成后解压至任意目录下。其中，windows版本的目录结构如下
 
@@ -102,6 +102,9 @@ class DataCallBack(QuantCallBack):
     def OnRtnUserInfo(self, pInfo):
         print ("OnRtnUserInfo", pInfo)
         pass
+    def OnRtnLoginWarn(self, pInfo):
+        print ("OnRtnLoginWarn", pInfo)
+        pass
     def OnRtnDayBegin(self, nReqId, pDate):
         print ("OnRtnDayBegin ", pDate)
         pass
@@ -127,8 +130,6 @@ def main():
 
 if __name__ == '__main__':
     main()
-if __name__ == '__main__':
-	main()
 ```
 
 
