@@ -23,15 +23,15 @@ QuantPlus_Api_Python 是 QuantPlus_Api 接口的 Python 实现
 
 **Window版本**
 
-* [python27](https://github.com/abramwang/QuantStageApi_Python/blob/master/download/python2.7-x64-Release.zip)
-* [python35](https://github.com/abramwang/QuantStageApi_Python/blob/master/download/python3.5-x64-Release.zip)
-* [python36](https://github.com/abramwang/QuantStageApi_Python/blob/master/download/python3.6-x64-Release.zip)
+* [python27](https://raw.githubusercontent.com/abramwang/QuantStageApi_Python/master/download/python2.7-x64-Release.zip)
+* [python35](https://raw.githubusercontent.com/abramwang/QuantStageApi_Python/master/download/python3.5-x64-Release.zip)
+* [python36](https://raw.githubusercontent.com/abramwang/QuantStageApi_Python/master/download/python3.6-x64-Release.zip)
 
 **linux版本**
 
-* [python27](https://github.com/abramwang/QuantStageApi_Python/blob/master/download/python2.7-linux.zip)
-* [python35](https://github.com/abramwang/QuantStageApi_Python/blob/master/download/python3.5-linux.zip)
-* [python36](https://github.com/abramwang/QuantStageApi_Python/blob/master/download/python3.6-linux.zip)
+* [python27](https://raw.githubusercontent.com/abramwang/QuantStageApi_Python/master/download/python2.7-linux.tar.gz)
+* [python35](https://raw.githubusercontent.com/abramwang/QuantStageApi_Python/master/download/python3.5-linux.tar.gz)
+* [python36](https://raw.githubusercontent.com/abramwang/QuantStageApi_Python/master/download/python3.6-linux.tar.gz)
 
 下载完成后解压至任意目录下。其中，windows版本的目录结构如下
 
