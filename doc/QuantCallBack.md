@@ -15,7 +15,8 @@ class QuantCallBack(PT_QuantApi_Python36.PT_QuantSpi):
 		pass
 	def OnRtnUserInfo(self, pInfo):
 		pass
-    
+    def OnRtnLoginWarn(self, pInfo):
+        pass
     #行情回调
 	def OnRspHaltingDay(self, pData):
 		pass
@@ -120,9 +121,22 @@ def OnRtnUserInfo(self, pInfo):
 | nTransferFees | double   | 过户费                                                       |
 | nCommissions  | double   | 手续费                                                       |
 
+### 4、登录警告信息推送
+
+服务器断开连接。
+
+```python
+def OnRtnLoginWarn(self, pInfo):
+	pass
+```
+
+| 字段名 | 参数类型 | 说明                                                         |
+| ------ | -------- | ------------------------------------------------------------ |
+| pInfo  | int      | 登录异常信息，参见[数据字典](https://github.com/abramwang/QuantPlusApi_Python/blob/master/doc/%E6%95%B0%E6%8D%AE%E5%AD%97%E5%85%B8.md)6 |
+
 ## 2、行情回调
 
-### 1 响应请求交易日列表回调
+### 1 响应请求停牌日列表回调
 
 ```python
 def OnRspHaltingDay(self, pData):

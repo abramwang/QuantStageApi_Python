@@ -69,7 +69,7 @@
 
 ## 2、行情接口
 
-### 1 请求交易日列表
+### 1 请求停牌日列表
 
 ```python
 >>>ret = api.ReqHaltingDay(nReqID, pSubWindCode, szBeginDay, szEndDay)
@@ -91,7 +91,29 @@
 
 回调接口为OnRspHaltingDay
 
-### 2 请求订阅行情
+### 2 请求交易日列表
+
+```python
+>>>ret = api.ReqTradingDay(nReqID, pSubWindCode, szBeginDay, szEndDay)
+>>>print("ReqTradingDay :", ret)#打印返回码
+```
+
+| 字段名       | 参数类型 | 说明          |
+| ------------ | -------- | ------------- |
+| nReqID       | int      | 用户输入reqid |
+| pSubWindCode | list     | 请求的代码表  |
+| szBeginDay   | string   | 起始日期      |
+| szEndDay     | string   | 结束日期      |
+
+例：
+
+```python
+>>>api.ReqTradingDay(1, ["600030.SH"], "2016-07-17", "2017-11-06")
+```
+
+回调接口为OnRspTradingDay
+
+### 3 请求订阅行情
 
 ```python
 >>>ret = api.ReqSubQuote(nReqID, SubType, CycType, pSubWindCode, szBeginTime, szEndTime)
@@ -115,7 +137,7 @@ SubType说明
 | ----------- | -------- | -------- |
 | market      | string   | 个股行情 |
 | index       | string   | 指数     |
-| transatcion | string   | 逐笔成交 |
+| transaction | string   | 逐笔成交 |
 | order       | string   | 逐笔委托 |
 | order_queue | string   | 委托队列 |
 | future      | string   | 期货     |

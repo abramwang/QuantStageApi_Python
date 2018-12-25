@@ -5,8 +5,8 @@
 
 | 项目名称 | Quant量化系统平台       | 研发单位 |  |
 | -------- | --------------------------- | -------- | ------------------------ |
-| 文档名称 | QuantBaseApi python开发手册 | 项目版本 | beta5.2.0             |
-| 文档状态 | 编辑中                      | 发布日期 | 2018.09.28              |
+| 文档名称 | QuantBaseApi python开发手册 | 项目版本 | beta5.2.1            |
+| 文档状态 | 编辑中                      | 发布日期 | 2018.12.21           |
 | 文档编辑 | 杨军辉、王龙                | 文档版本 | 1.0                      |
 
 [项目主页](https://www.quantstage.com/) 
@@ -102,6 +102,9 @@ class DataCallBack(QuantCallBack):
     def OnRtnUserInfo(self, pInfo):
         print ("OnRtnUserInfo", pInfo)
         pass
+    def OnRtnLoginWarn(self, pInfo):
+        print ("OnRtnLoginWarn", pInfo)
+        pass
     def OnRtnDayBegin(self, nReqId, pDate):
         print ("OnRtnDayBegin ", pDate)
         pass
@@ -127,8 +130,6 @@ def main():
 
 if __name__ == '__main__':
     main()
-if __name__ == '__main__':
-	main()
 ```
 
 
