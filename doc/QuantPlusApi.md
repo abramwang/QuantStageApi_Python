@@ -12,8 +12,8 @@
 | ---------- | ------------- | ------------------------------------------------------------ |
 | spi        | QuantCallBack | 回调类实例，参照回调类                                       |
 | bEnableLog | bool          | 是否开启日志                                                 |
-| szTdType   | string        | 交易环境类型，"Td_Real"为生产环境；"Td_SimulateTd"模拟环境；Td_Test为测试环境；默认为测试环境 |
-| szMdType   | string        | 行情环境类型，"MD_Real"为生产环境；"MD_Test"为测试环境；默认为测试环境 |
+| szTdType   | string        | 交易环境类型，"Td_Real"为生产环境；"Td_SimulateTd"模拟环境；默认为创建生产环境 |
+| szMdType   | string        | 行情环境类型，"MD_Real"为生产环境                            |
 
 行情暂不支持测试环境
 
