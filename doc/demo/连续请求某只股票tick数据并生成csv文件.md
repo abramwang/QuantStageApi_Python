@@ -56,7 +56,7 @@ class DataCallBack(QuantCallBack):
 
 ```python
 mspi = DataCallBack()；      #创建回调类
-mapi = PT_QuantApi_Python36.PT_QuantApi(mspi, True, "Td_Test", "MD_Real")  #此处设置，创建的是交易的测试环境，以及行情的实时环境    交易生产环境在账号有权限的情况下将Td_Test替换成Td_Real即可
+mapi = PT_QuantApi_Python36.PT_QuantApi(mspi, True, "Td_Real", "MD_Real")  #此处设置，创建的是交易的实盘环境，以及行情的实时环境    交易模拟环境在账号有权限的情况下将Td_Real替换成Td_SimulateTd即可
 PT_QuantApi_Python36.Init()
 ```
 
@@ -67,7 +67,7 @@ PT_QuantApi_Python36.Init()
 用户登录后，触发用户登录回调，回调函数接收相应的回调信息。
 
 ```python
-retLog = mapi.Login("test1", "abcd1234")
+retLog = mapi.Login("DevTest1", "abcd1234")
 print("QuantPlus Login :", retLog)#打印登录返回码
 ```
 
@@ -128,7 +128,7 @@ class DataCallBack(QuantCallBack):
     
     def __init__(self):
         super(DataCallBack, self).__init__()
-        self.api = PT_QuantApi_Python36.PT_QuantApi(self, True, "Td_Test", "MD_Real")
+        self.api = PT_QuantApi_Python36.PT_QuantApi(self, True, "Td_Real", "MD_Real")
         self.listMarket=[]
         self.listOrderQueue=[]
     def OnConnect(self, type):
@@ -226,7 +226,7 @@ def main():
     mapi = mspi.api
     PT_QuantApi_Python36.Init()
 
-    mapi.Login("test1", "abcd1234")
+    mapi.Login("DevTest1", "abcd1234")
 
     time.sleep(1)    #此处休眠一秒，保证在行情服务器连接成功后做请求
     mapi.ReqSubQuote(1, ["order_queue","market"], [""], ["002003.SZ"], "2018-07-24 8:30:00", "2018-07-24 24:00:00")
