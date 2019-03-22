@@ -90,7 +90,7 @@ from QuantBaseApi import QuantCallBack,PT_QuantApi_Python36
 class DataCallBack(QuantCallBack):
     def __init__(self):
         super(DataCallBack, self).__init__()
-        self.api = PT_QuantApi_Python36.PT_QuantApi(self, True, "Td_Test", "MD_Real")  
+        self.api = PT_QuantApi_Python36.PT_QuantApi(self, True, "Td_Real", "MD_Real")  
     def OnConnect(self, type):
         print("OnConnnect:", type)
         if type == 2: 
@@ -124,7 +124,7 @@ def main():
     PT_QuantApi_Python36.Init()
     #print mapi.GetErrMsg(3)
     #print mapi.getVersion()
-    retLog = mapi.Login("test1", "abcd1234")
+    retLog = mapi.Login("DevTest1", "abcd1234")
     print("QuantPlus Login :", retLog)#打印登录返回码
     mapi.Run()
 
